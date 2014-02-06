@@ -53,10 +53,6 @@ h1 {
 	line-height: 1.4;
 	}	
 
-#hello {
-	padding-top:120px;
-}
-
 h2 {
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
@@ -140,13 +136,35 @@ p.caption {
 
 #header {
 	height:420px;
+	background-color: #ffffff;
+}
 
+#header.tiny {
+    position:fixed;
+    height:100px;
+    width: 940px;
+    margin-top: -420px;
+}
+
+#descrip.invis {
+	display:none;
+}
+
+#hello {
+	padding-top:120px;
+}
+
+#hello.moveup {
+	padding-top:0px;
 }
 
 #nav{
 	float: right;
 	padding-top: 120px;
+}
 
+#nav.moveup{
+	padding-top: 0px;
 }
 
 a.scroll {
@@ -169,6 +187,10 @@ a.scroll:hover {
 	width: 940px;
 	margin: 0 auto;
 
+}
+
+#blurb.padded{
+	margin-top: 420px;
 }
 
 div.blurb-text{

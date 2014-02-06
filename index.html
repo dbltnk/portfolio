@@ -29,9 +29,9 @@
 	<div id="content-wrap">
 		<div id="header">
 			<div id="hello">
-			<img class="floatL" src="assets/alex.png">
+			<img class="floatL" id="headerimg" src="assets/alex.png">
 			<h1>Hello, I’m Alex.</h1>
-			<h2>I am a game designer & entrepreneur <br />
+			<h2 id="descrip">I am a game designer & entrepreneur <br />
 			based in Munich, Germany.</h2>
 			</div>
 			<div id="nav">
@@ -44,6 +44,26 @@
 			</div>		
 		</div>
 	</div>
+	
+	<script>
+		$(window).scroll(function () {
+		  if ($(document).scrollTop() <= 320) {
+			$('#header').removeClass('tiny');
+			$('#hello').removeClass('moveup');
+			document.getElementById("headerimg").src="assets/alex.png";
+			$('#nav').removeClass('moveup');
+			$('#descrip').removeClass('invis');
+			$('#blurb').removeClass('padded');
+		  } else {
+			$('#header').addClass('tiny');
+			$('#hello').addClass('moveup');
+			document.getElementById("headerimg").src="assets/alex_small.png";
+			$('#nav').addClass('moveup');
+			$('#descrip').addClass('invis');
+			$('#blurb').addClass('padded');
+		  }
+		});
+	</script>
 
 	<div id="black">
 		<div id="blurb">
