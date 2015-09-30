@@ -31,19 +31,19 @@ body {
 	width: 940px;
 }
 
-a { 
+a {
 	font-family: 'Lato', sans-serif;
-	font-size: 14px; 
-	text-decoration: none; 
+	font-size: 14px;
+	text-decoration: none;
 	color: #4aff86;
 	}
 
-a:visited { 
-	color: #4aff86; 
+a:visited {
+	color: #4aff86;
 	}
-	
-a:hover { 
-	color: #a4ffc0; 
+
+a:hover {
+	color: #a4ffc0;
 	}
 
 h1 {
@@ -51,7 +51,7 @@ h1 {
 	font-weight: 700;
 	font-size: 48px;
 	line-height: 1.4;
-	}	
+	}
 
 #hello {
 	padding-top:120px;
@@ -69,7 +69,7 @@ h3 {
 	padding-bottom: 14px;
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
-	font-size: 24px; 
+	font-size: 24px;
 	color: #ffffff;
 	}
 
@@ -78,7 +78,7 @@ h4 {
 	padding-bottom: 14px;
 	font-family: 'Lato', sans-serif;
 	font-weight: 900;
-	font-size: 24px; 
+	font-size: 24px;
 	line-height: 1.4;
 	}
 
@@ -86,7 +86,7 @@ h5 {
 	padding-top: 10px;
 	font-family: 'Lato', sans-serif;
 	font-weight: 700;
-	font-size: 14px; 
+	font-size: 14px;
 	line-height: 1.4;
 	color: #2b2b2b;
 	}
@@ -99,27 +99,27 @@ h5:hover {
 ul {
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
-	font-size: 14px; 
+	font-size: 14px;
 	line-height: 3;
 	list-style-type: none;
 	}
-	
+
 td {
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
-	font-size: 14px; 
+	font-size: 14px;
 	line-height: 3;
 	list-style-type: none;
 	}
-	
+
 td.spaced {
 	padding-left: 50px;
 }
 
-p {	
+p {
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
-	font-size: 14px; 
+	font-size: 14px;
 	line-height: 1.5;
 }
 
@@ -130,12 +130,12 @@ strong {
 p.caption {
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
-	font-size: 12px; 
+	font-size: 12px;
 	line-height: 1.5;
 	color: #2b2b2b;
 }
 
-/* 
+/*
 *************************************************/
 
 #header {
@@ -151,8 +151,8 @@ p.caption {
 
 a.scroll {
 	font-family: 'Lato', sans-serif;
-	font-size: 14px; 
-	text-decoration: none; 
+	font-size: 14px;
+	text-decoration: none;
 	color: #2b2b2b;
 }
 
@@ -244,7 +244,7 @@ div.line {
 }
 
 #talks {
-	height: 440px;
+	height: 650px;
 	border-bottom: 1px solid #ccc;
 }
 #events {
@@ -256,7 +256,7 @@ div.line {
 	border-bottom: 1px solid #ccc;
 }
 #articles {
-	height: 350px;
+	height: 650px;
 	border-bottom: 1px solid #ccc;
 }
 
@@ -289,7 +289,7 @@ h3.floatL {
 p.number {
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
-	font-size: 14px; 
+	font-size: 14px;
 	line-height: 1.5;
 	color: #ffffff;
 }
