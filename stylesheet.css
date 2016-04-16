@@ -259,6 +259,10 @@ div.line {
 	height: 650px;
 	border-bottom: 1px solid #ccc;
 }
+#interviews {
+	height: 650px;
+	border-bottom: 1px solid #ccc;
+}
 
 #footer{
 	background-color: #2b2b2b;
