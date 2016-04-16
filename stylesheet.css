@@ -266,7 +266,6 @@ div.line {
 
 #footer{
 	background-color: #2b2b2b;
-
 }
 
 #contact{
@@ -274,6 +273,15 @@ div.line {
 	height:200px;
 	padding-top: 40px;
 	margin: 0 auto;
+}
+
+#hobbies{
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.5;
+	color: #ffffff;
+	padding-top: 10px;
 }
 
 .floatL {
@@ -288,6 +296,7 @@ h3.floatL {
 .floatR {
 	display:inline-block;
 	float: right;
+	padding-top: 20px;
 }
 
 p.number {
