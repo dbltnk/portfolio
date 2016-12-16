@@ -23,6 +23,41 @@
 
 <script src="jquery-1.11.0.min.js"></script>
 
+<script>
+
+    /* Light YouTube Embeds by @labnol */
+    /* Web: http://labnol.org/?p=27941 */
+
+    document.addEventListener("DOMContentLoaded",
+        function() {
+            var div, n,
+                v = document.getElementsByClassName("youtube-player");
+            for (n = 0; n < v.length; n++) {
+                div = document.createElement("div");
+                div.setAttribute("data-id", v[n].dataset.id);
+                div.innerHTML = labnolThumb(v[n].dataset.id);
+                div.onclick = labnolIframe;
+                v[n].appendChild(div);
+            }
+        });
+
+    function labnolThumb(id) {
+        var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',
+            play = '<div class="play"></div>';
+        return thumb.replace("ID", id) + play;
+    }
+
+    function labnolIframe() {
+        var iframe = document.createElement("iframe");
+        var embed = "https://www.youtube.com/embed/ID?autoplay=1";
+        iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("allowfullscreen", "1");
+        this.parentNode.replaceChild(iframe, this);
+    }
+
+</script>
+
 </head>
 
 <body>
@@ -67,21 +102,24 @@
 		<div id="games">
 			<h4>Games</h4>
 			<div class="thumbnail-list">
-				<iframe width="300" height="169" src="https://www.youtube.com/embed/CjJQIeKwSMA?rel=0&controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+				<!--<iframe width="300" height="169" src="https://www.youtube.com/embed/CjJQIeKwSMA?rel=0&controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>-->
+        <div class="youtube-player" data-id="CjJQIeKwSMA"></div>
 				<a href="http://www.the-exiled.co/" target="_blank">
 					<h5>The Exiled</h5>
 					<p class="caption">since 2013</p>
 				</a>
 			</div>
 			<div class="thumbnail-list">
-				<iframe width="300" height="169" src="//www.youtube.com/embed/_1fSCpAwc3M?rel=0&controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+				<!--<iframe width="300" height="169" src="//www.youtube.com/embed/_1fSCpAwc3M?rel=0&controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>-->
+        <div class="youtube-player" data-id="_1fSCpAwc3M"></div>
 				<a href="https://itunes.apple.com/us/app/san-juan/id513228980?mt=8" target="_blank">
 					<h5>San Juan</h5>
 					<p class="caption">2012</p>
 				</a>
 			</div>
 			<div class="thumbnail-list2">
-				<iframe width="300" height="169" src="//www.youtube.com/embed/CQtMPMdnvXA?rel=0&controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+				<!--<iframe width="300" height="169" src="//www.youtube.com/embed/CQtMPMdnvXA?rel=0&controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>-->
+        <div class="youtube-player" data-id="CQtMPMdnvXA"></div>
 				<a href="http://astroslugs.com/" target="_blank">
 					<h5>Astroslugs</h5>
 					<p class="caption">2009 - 2011</p>
