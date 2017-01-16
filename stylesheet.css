@@ -22,13 +22,15 @@ body {
 	line-height: 1;
 	color: #2b2b2b;
 	background: white;
-	margin: 0 auto;
+	margin: 0;
+	padding: 0;
+	width: 100%;
 }
-
 
 #content-wrap {
 	margin: 0 auto;
-	width: 940px;
+	width: 78%; /* width: 940px; */
+	max-width: 940px;
 }
 
 a {
@@ -36,42 +38,43 @@ a {
 	font-size: 14px;
 	text-decoration: none;
 	color: #4aff86;
-	}
+}
 
 a:visited {
 	color: #4aff86;
-	}
+}
 
 a:hover {
 	color: #a4ffc0;
-	}
+}
 
 h1 {
 	font-family: 'Lato', sans-serif;
 	font-weight: 700;
 	font-size: 48px;
 	line-height: 1.4;
-	}
-
-#hello {
-	padding-top:120px;
 }
+
+/*
+#hello {
+	padding-top: 120px;
+}
+*/
 
 h2 {
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
-	font-size: 30px;
+	font-size: 28px;
 	line-height: 1.3;
-	}
+}
 
 h3 {
-	padding-top: 40px;
 	padding-bottom: 14px;
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	font-size: 24px;
 	color: #ffffff;
-	}
+}
 
 h4 {
 	padding-top: 20px;
@@ -80,7 +83,7 @@ h4 {
 	font-weight: 900;
 	font-size: 24px;
 	line-height: 1.4;
-	}
+}
 
 h5 {
 	padding-top: 10px;
@@ -89,12 +92,11 @@ h5 {
 	font-size: 14px;
 	line-height: 1.4;
 	color: #2b2b2b;
-	}
+}
 
 h5:hover {
 	color: #4aff86;
 }
-
 
 ul {
 	font-family: 'Lato', sans-serif;
@@ -102,7 +104,7 @@ ul {
 	font-size: 14px;
 	line-height: 3;
 	list-style-type: none;
-	}
+}
 
 td {
 	font-family: 'Lato', sans-serif;
@@ -110,10 +112,18 @@ td {
 	font-size: 14px;
 	line-height: 3;
 	list-style-type: none;
-	}
+}
 
-td.spaced {
+td.title {
+	line-height: 1.5;
+}
+
+td.spaced, td.year {
 	padding-left: 50px;
+}
+
+td.inline_cell span, td.sep_cell {
+	display: none;
 }
 
 p {
@@ -139,14 +149,14 @@ p.caption {
 *************************************************/
 
 #header {
-	height:420px;
-
+	/* height: 420px; */
+	overflow: hidden; /* new */
+	padding: 120px 0 20px 0; /* new */
 }
 
-#nav{
+#nav {
 	float: right;
 	padding-top: 120px;
-
 }
 
 a.scroll {
@@ -160,56 +170,77 @@ a.scroll:hover {
 	color: #4aff86;
 }
 
-#black{
+#black {
 	background-color: #2b2b2b;
-	height:240px;
+	min-width: 320px; /* new */
+	width: 100%; /* new */
+	/* height: 240px; */
 }
 
-#blurb{
-	width: 940px;
+#blurb {
+	max-width: 940px; /* width: 940px; */
 	margin: 0 auto;
-
+	padding: 40px 20px; /* new */
+	overflow: hidden; /* new */
+	
 }
 
-div.blurb-text{
-	width: 300px;
+div.blurb-text, div.blurb-text2 {
+	width: 33%; /* width: 300px; */
+	max-width: 300px;
 	display: inline-block;
-	color: #ffffff;
+	color: #fff;
+	float: left; /* new */
+}
+
+div.blurb-text {
 	padding-right: 15px;
 }
 
-div.blurb-text2{
-	width: 300px;
-	display: inline-block;
-	color: #ffffff;
-}
-
-div.thumbnail-list {
-	width: 300px;
+div.thumbnail-list, div.thumbnail-list2 {
+	width: 100%; /* width: 300px; */
+	max-width: 300px;
 	display: inline-block;
 	padding-right: 15px;
 }
 
-div.thumbnail-list2 {
-	width: 300px;
-	display: inline-block;
+div.thumbnail-list img, div.thumbnail-list2 img {
+	width: 100%; /* new */
 }
 
-div.thumbnail-list-small {
-	width: 140px;
+#games div.thumbnail-list, #games div.thumbnail-list2 {
+	width: 32%;
+	float: left;
+}
+
+#games div.thumbnail-list2 {
+	padding-right: 0;
+}
+
+#events div.thumbnail-list, #events div.thumbnail-list2, #articles div.thumbnail-list, #articles div.thumbnail-list2 {
+		width: 40%;
+		float: left;
+		margin: 10px 5px;
+		padding-right: 0;
+}
+
+div.thumbnail-list-small, div.thumbnail-list-small2 {
+	min-width: 140px;
 	display: inline-block;
-	padding-right: 15px;
+	margin-left: 5px;
+	margin-right: 5px;
+	float: left;
 	padding-bottom: 10px;
 }
 
-div.thumbnail-list-small2 {
-	width: 140px;
-	display: inline-block;
-	padding-bottom: 10px;
+div.thumbnail-list-small img, div.thumbnail-list-small2 img {
+	width: 100%;
 }
 
 div.morelink {
-	float: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }
 
 div.text-list {
@@ -234,14 +265,20 @@ div.line {
 }
 
 #games {
-	height: 310px;
+	/* height: 310px; */
+	overflow: hidden;
+	position: relative;
 }
 
 #moregames {
 	padding-top: 20px;
-	height: 630px;
+	min-height: 630px; /* height: 630px */
 	display:none;
+	overflow: hidden;
+	width: 100%;
 }
+
+/*
 
 #talks {
 	height: 660px;
@@ -264,14 +301,25 @@ div.line {
 	border-bottom: 1px solid #ccc;
 }
 
+ */
+
+#talks, #events, #workshops, #articles, #interviews {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 20px;
+	overflow: hidden;
+	width: 100%;
+}
+
 #footer{
 	background-color: #2b2b2b;
+	padding: 50px 20px;
 }
 
 #contact{
-	width: 940px;
-	height:200px;
-	padding-top: 40px;
+	width: 100%;
+	max-width: 940px;
+	/* padding-top: 40px; */
+	overflow: hidden; /* new */
 	margin: 0 auto;
 }
 
@@ -284,19 +332,31 @@ div.line {
 	padding-top: 10px;
 }
 
-.floatL {
+.floatL, .floatL_top {
 	float: left;
 	padding-right: 20px;
 }
 
-h3.floatL {
+.v_align {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+h3.v_align {
 	line-height: 1.3;
+	padding-bottom: 0;
+	padding-left: 16px;
+}
+
+.floatL {
+	width: 48%;
 }
 
 .floatR {
 	display:inline-block;
 	float: right;
 	padding-top: 20px;
+	width: 48%;
 }
 
 p.number {
@@ -306,6 +366,7 @@ p.number {
 	line-height: 1.5;
 	color: #ffffff;
 }
+
 
 .youtube-player {
         position: relative;
@@ -361,3 +422,251 @@ p.number {
         background: url("assets/play_icon.png") no-repeat;
         cursor: pointer;
     }
+	
+	
+	
+	
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1200px) {
+	#events div.thumbnail-list, #events div.thumbnail-list2, #articles div.thumbnail-list, #articles div.thumbnail-list2 {
+		margin: 10px;
+	}
+}
+
+@media screen and (max-width: 970px) {
+	div.blurb-text2 {
+		margin-top: 20px;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	#blurb {
+		padding: 20px 10px;
+		display: block;
+		justify-content: flex-start;
+	}
+	
+	div.blurb-text, div.blurb-text2 {
+		float: none;
+		display: block;
+		margin: 30px auto;
+		max-width: 600px;
+		width: 90%;
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	#content-wrap {
+		width: 85%;
+	}
+	
+	#header, #nav {
+		padding-top: 60px;
+	}
+	
+	#nav {
+		float: none;
+		text-align: center;
+	}
+	
+	a.scroll {
+		display: inline-block;
+		margin: 6px 0;
+	}
+	
+	#contact {
+		width: 90%;
+	}
+	
+	.floatR {
+		padding-top: 30px;
+	}
+	
+	.floatL, .floatR {
+		width: 100%;
+		float: none;
+		text-align: center;
+		padding-right: 0;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	
+}
+
+@media screen and (max-width: 750px) {
+	table, thead, tbody, tr, td, th {
+		display: block;
+	}
+	
+	td.inline_cell {
+		display: inline-block;
+	}
+	
+	td.inline_cell span {
+		display: inline-block;
+	}
+	
+	td.sep_cell {
+		display: block;
+		margin-bottom: 8px;
+	}
+	
+	table {
+		border-collapse: collapse;
+	}
+	
+	tr, td {
+		padding: 0;
+		margin: 0;
+	}
+	
+	tr {
+		margin: 10px 0;
+	}
+	
+	td {
+		margin: -10px 0;
+	}
+	
+	td.title {
+		line-height: 1.5;
+		margin: 5px 0;
+	}
+	
+	td.spaced, td.first {
+		padding-left: 0;
+		margin-left: -3px !important;
+	}
+	
+	td.year {
+		padding-left: 0;
+	}
+	
+	td.icons {
+		display: inline-block;
+		margin: 0;
+	}
+	
+	td strong {
+		line-height: 1;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	div.thumbnail-list, #games div.thumbnail-list {
+		display: block;
+		padding-right: 0;
+		max-width: 500px;
+		margin: 15px auto 25px auto;
+		float: none;
+		width: 60%;
+	}
+
+	div.thumbnail-list2, #games div.thumbnail-list2 {
+		display: block;
+		max-width: 500px;
+		margin: 15px auto 25px auto;
+		float: none;
+		width: 60%;
+	}
+	
+	#hello h1 {
+		font-size: 42px;
+	}
+	
+	#hello h2 {
+		font-size: 28px;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	#header {
+		padding: 40px 0 20px 0;
+	}
+
+	#hello {
+		text-align: center;
+	}
+	
+	.floatL, .floatL_top {
+		float: none;
+		padding-bottom: 10px;
+	}
+
+	#hello h1 {
+		font-size: 40px;
+		text-align: left;
+	}
+	
+	#hello h2 {
+		font-size: 20px;
+		text-align: left;
+	}
+	
+	#nav {
+		padding-top: 30px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	#moregames {
+		padding-top: 40px;
+		overflow: hidden;
+		width: 100%;
+	}
+	
+	#games div.thumbnail-list, #games div.thumbnail-list2 {
+		width: 100%;
+	}
+	
+	#events div.thumbnail-list, #events div.thumbnail-list2, #articles div.thumbnail-list, #articles div.thumbnail-list2 {
+		width: 100%;
+		float: none;
+		margin: 10px 0;
+	}
+	
+	div.thumbnail-list-small, div.thumbnail-list-small2 {
+		min-width: 100px;
+		width: 45%;
+		float: left;
+		margin: 0 4px;
+		padding-right: 0;
+		padding-bottom: 0;
+	}
+	
+	div.thumbnail-list-small h5, div.thumbnail-list-small2 h5 {
+		font-size: 12px;
+	}
+	
+	div.thumbnail-list-small p, div.thumbnail-list-small2 p {
+		font-size: 10px;
+	}
+	
+	.floatL h3 {
+		padding-left: 0;
+		padding-top: 10px;
+	}
+	
+	.floatR img {
+		max-width: 40px;
+	}
+}
+
+@media screen and (max-width: 375px) {	
+	#hello h2 {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	#hello h1 {
+		font-size: 38px;
+	}
+	
+	#hello h2 {
+		font-size: 16px;
+	}
+}
