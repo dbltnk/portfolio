@@ -213,7 +213,7 @@ div.thumbnail-list img, div.thumbnail-list2 img {
 	padding-right: 0;
 }
 
-#events div.thumbnail-list, #events div.thumbnail-list2, #articles div.thumbnail-list, #articles div.thumbnail-list2, #freelance div.thumbnail-list {
+#events div.thumbnail-list, #events div.thumbnail-list2, #articles div.thumbnail-list, #articles div.thumbnail-list2, #consulting div.thumbnail-list {
 		width: 40%;
 		float: left;
 		margin: 10px 5px;
@@ -299,15 +299,15 @@ div.line {
 
  */
 
-#talks, #events, #workshops, #articles, #interviews, #freelance {
+#talks, #events, #workshops, #articles, #interviews, #consulting {
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 20px;
 	overflow: hidden;
 	width: 100%;
 }
 
-#freelance {
-	background-color: yellow;
+#consulting {
+	/*background-color: yellow;*/
 }
 
 #footer{
