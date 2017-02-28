@@ -237,7 +237,8 @@ div.thumbnail-list img, div.thumbnail-list2 img {
 #consulting div.thumbnail-list {
 		width: 40%;
 		float: left;
-		margin: 10px 0px;
+		margin-top: 10px;
+		margin-right:10px;
 		padding-right: 0;
 }
 
@@ -347,7 +348,7 @@ div.line {
 	font-size: 14px;
 	line-height: 1.5;
 	color: #ffffff;
-	padding-top: 10px;
+	padding-top: 20px;
 }
 
 #consulting{
