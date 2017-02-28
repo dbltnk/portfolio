@@ -96,6 +96,7 @@ h5 {
 
 h6 {
 	padding-bottom: 10px;
+	font-weight: 700;
 }
 
 ul {
@@ -226,12 +227,20 @@ div.thumbnail-list img, div.thumbnail-list2 img {
 	padding-right: 0;
 }
 
-#events div.thumbnail-list, #events div.thumbnail-list2, #articles div.thumbnail-list, #articles div.thumbnail-list2, #consulting div.thumbnail-list {
+#events div.thumbnail-list, #events div.thumbnail-list2, #articles div.thumbnail-list, #articles div.thumbnail-list2 {
 		width: 40%;
 		float: left;
 		margin: 10px 5px;
 		padding-right: 0;
 }
+
+#consulting div.thumbnail-list {
+		width: 40%;
+		float: left;
+		margin: 10px 0px;
+		padding-right: 0;
+}
+
 
 div.thumbnail-list-small, div.thumbnail-list-small2 {
 	min-width: 140px;
@@ -342,13 +351,14 @@ div.line {
 }
 
 #consulting{
-	background-color: #555555;
+	background-color: #444444;
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 1.5;
 	color: #ffffff;
 	padding-top: 10px;
+	padding-bottom: 28px;
 	border-bottom: none;
 }
 
@@ -591,6 +601,15 @@ p.number {
 		margin: 15px auto 25px auto;
 		float: none;
 		width: 60%;
+	}
+
+	#consulting div.thumbnail-list {
+		display: block;
+		padding-right: 0;
+		max-width: 500px;
+		margin: 0px auto 25px auto;
+		float: none;
+		width: 100%;
 	}
 
 	#hello h1 {
