@@ -256,6 +256,20 @@ div.thumbnail-list-small img, div.thumbnail-list-small2 img {
 	width: 100%;
 }
 
+div.logo-list-small, div.logo-list-small2 {
+	min-width: 0px;
+	display: inline-block;
+	margin-left: 0px;
+	margin-right: 20px;
+	float: left;
+	padding-bottom: 10px;
+}
+
+div.logo-list-small img, div.logo-list-small2 img {
+	height: 61px;
+	width: auto;
+}
+
 div.morelink {
 	position: absolute;
 	bottom: 0;
@@ -341,6 +355,19 @@ div.line {
 	overflow: hidden; /* new */
 	margin: 0 auto;
 }
+
+#clients{
+	width: 100%;
+	max-width: 940px;
+	padding-top: 40px;
+	overflow: hidden; /* new */
+	margin: 0 auto;
+}
+
+#clients {
+	width: 90%;
+}
+
 
 #hobbies{
 	font-family: 'Lato', sans-serif;
