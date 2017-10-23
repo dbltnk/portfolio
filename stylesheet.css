@@ -390,6 +390,12 @@ div.line {
 	border-bottom: none;
 }
 
+.topcorner {
+  position:absolute;
+  top:0;
+  right:0;
+}
+
 .floatL, .floatL_top {
 	float: left;
 	padding-right: 20px;
