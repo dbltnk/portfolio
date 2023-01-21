@@ -336,7 +336,7 @@ div.line {
 
  */
 
-#talks, #events, #workshops, #articles, #interviews, #consulting {
+#papers, #talks, #events, #workshops, #articles, #interviews, #consulting {
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 20px;
 	overflow: hidden;
