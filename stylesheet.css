@@ -163,14 +163,14 @@ p.caption {
 	padding-top: 120px;
 }
 
-a.scroll {
+a.nav-item {
 	font-family: 'Lato', sans-serif;
 	font-size: 14px;
 	text-decoration: none;
 	color: #2b2b2b;
 }
 
-a.scroll:hover {
+a.nav-item:hover {
 	color: #4A89E8;
 }
 
@@ -517,7 +517,7 @@ p.number {
 		text-align: center;
 	}
 
-	a.scroll {
+	a.nav-item {
 		display: inline-block;
 		margin: 6px 0;
 	}
