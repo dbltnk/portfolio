@@ -1,95 +1,114 @@
 <!doctype html>
 <html>
+
 <head>
-<title>Alexander Zacherl</title>
+	<title>Alexander Zacherl</title>
 
-<meta property="og:url" content="http://www.alexanderzacherl.de/" />
-<meta property="og:title" content="Alexander Zacherl" />
-<meta property="og:description" content="Systems Design and Competitive Games. Based in London, UK." />
-<meta property="og:image" content="http://open-pvp.de/personal/assets/fb_preview.jpg" />
+	<meta property="og:url" content="http://www.alexanderzacherl.de/" />
+	<meta property="og:title" content="Alexander Zacherl" />
+	<meta property="og:description" content="Systems Design and Competitive Games. Based in London, UK." />
+	<meta property="og:image" content="http://open-pvp.de/personal/assets/fb_preview.jpg" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="stylesheet.css">
-<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
 
-<script src="jquery-1.11.0.min.js"></script>
+	<script src="jquery-1.11.0.min.js"></script>
 
-<script>
+	<script>
 
-    /* Light YouTube Embeds by @labnol */
-    /* Web: http://labnol.org/?p=27941 */
+		/* Light YouTube Embeds by @labnol */
+		/* Web: http://labnol.org/?p=27941 */
 
-    document.addEventListener("DOMContentLoaded",
-        function() {
-            var div, n,
-                v = document.getElementsByClassName("youtube-player");
-            for (n = 0; n < v.length; n++) {
-                div = document.createElement("div");
-                div.setAttribute("data-id", v[n].dataset.id);
-                div.innerHTML = labnolThumb(v[n].dataset.id);
-                div.onclick = labnolIframe;
-                v[n].appendChild(div);
-            }
-        });
+		document.addEventListener("DOMContentLoaded",
+			function () {
+				var div, n,
+					v = document.getElementsByClassName("youtube-player");
+				for (n = 0; n < v.length; n++) {
+					div = document.createElement("div");
+					div.setAttribute("data-id", v[n].dataset.id);
+					div.innerHTML = labnolThumb(v[n].dataset.id);
+					div.onclick = labnolIframe;
+					v[n].appendChild(div);
+				}
+			});
 
-    function labnolThumb(id) {
-        var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',
-            play = '<div class="play"></div>';
-        return thumb.replace("ID", id) + play;
-    }
+		function labnolThumb(id) {
+			var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',
+				play = '<div class="play"></div>';
+			return thumb.replace("ID", id) + play;
+		}
 
-    function labnolIframe() {
-        var iframe = document.createElement("iframe");
-        var embed = "https://www.youtube.com/embed/ID?autoplay=1";
-        iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
-        iframe.setAttribute("frameborder", "0");
-        iframe.setAttribute("allowfullscreen", "1");
-        this.parentNode.replaceChild(iframe, this);
-    }
+		function labnolIframe() {
+			var iframe = document.createElement("iframe");
+			var embed = "https://www.youtube.com/embed/ID?autoplay=1";
+			iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
+			iframe.setAttribute("frameborder", "0");
+			iframe.setAttribute("allowfullscreen", "1");
+			this.parentNode.replaceChild(iframe, this);
+		}
 
-</script>
+	</script>
 
 </head>
 
 <body>
-  <a href="https://medium.com/competitive-games/mechanics-are-the-message-4c27db1c9da3"><img class="topcorner" src="assets/stoerer.png"></a>
+	<a href="https://medium.com/competitive-games/mechanics-are-the-message-4c27db1c9da3"><img class="topcorner"
+			src="assets/stoerer.png"></a>
 	<div id="content-wrap">
 		<div id="header">
 			<div id="hello">
-			<img class="floatL_top" src="assets/alex.png">
-			<h1>Hello, I’m Alex.</h1>
-			<h2>I'm building environments<br/>to facilitate interaction.</h2>
+				<img class="floatL_top" src="assets/alex.png">
+				<h1>Hello, I’m Alex.</h1>
+				<h2>I'm building environments<br />to facilitate interaction.</h2>
 			</div>
 			<div id="nav">
-				<a class="scroll" data-speed="1000" data-easing="easeInOutCubic" data-url="false" href="#papers">Papers</a> &nbsp; &nbsp;
-				<a class="scroll" data-speed="1000" data-easing="easeInOutCubic" data-url="false" href="#games">Games</a> &nbsp; &nbsp;
-				<a class="scroll" data-speed="1500" data-easing="easeInOutCubic" data-url="false"href="#talks">Talks</a> &nbsp; &nbsp;
-				<a class="scroll" data-speed="1500" data-easing="easeInOutCubic" data-url="false"href="#events">Events</a> &nbsp; &nbsp;
-				<a class="scroll" data-speed="2000" data-easing="easeInOutCubic" data-url="false"href="#workshops">Workshops</a> &nbsp; &nbsp;
-				<a class="scroll" data-speed="2000" data-easing="easeInOutCubic" data-url="false"href="#articles">Articles</a> &nbsp; &nbsp;
-				<a class="scroll" data-speed="2000" data-easing="easeInOutCubic" data-url="false"href="#interviews">Interviews</a> &nbsp; &nbsp;
-				<a class="scroll" data-speed="2000" data-easing="easeInOutCubic" data-url="false"href="#film">Film</a> &nbsp; &nbsp;
-				<a class="scroll" data-speed="2000" data-easing="easeInOutCubic" data-url="false"href="#consulting">Consulting</a> &nbsp; &nbsp;
-				<a class="scroll" data-speed="2000" data-easing="easeInOutCubic" data-url="false"href="#contact">Contact</a> &nbsp; &nbsp;
+				<a class="scroll" data-speed="1000" data-easing="easeInOutCubic" data-url="false"
+					href="#papers">Papers</a> &nbsp; &nbsp;
+				<a class="scroll" data-speed="1000" data-easing="easeInOutCubic" data-url="false"
+					href="#games">Games</a> &nbsp; &nbsp;
+				<a class="scroll" data-speed="1500" data-easing="easeInOutCubic" data-url="false"
+					href="#talks">Talks</a> &nbsp; &nbsp;
+				<a class="scroll" data-speed="1500" data-easing="easeInOutCubic" data-url="false"
+					href="#events">Events</a> &nbsp; &nbsp;
+				<a class="scroll" data-speed="2000" data-easing="easeInOutCubic" data-url="false"
+					href="#workshops">Workshops</a> &nbsp; &nbsp;
+				<a class="scroll" data-speed="2000" data-easing="easeInOutCubic" data-url="false"
+					href="#articles">Articles</a> &nbsp; &nbsp;
+				<a class="scroll" data-speed="2000" data-easing="easeInOutCubic" data-url="false"
+					href="#interviews">Interviews</a> &nbsp; &nbsp;
+				<a class="scroll" data-speed="2000" data-easing="easeInOutCubic" data-url="false" href="#film">Film</a>
+				&nbsp; &nbsp;
+				<a class="scroll" data-speed="2000" data-easing="easeInOutCubic" data-url="false"
+					href="#consulting">Consulting</a> &nbsp; &nbsp;
+				<a class="scroll" data-speed="2000" data-easing="easeInOutCubic" data-url="false"
+					href="#contact">Contact</a> &nbsp; &nbsp;
 			</div>
 		</div>
 	</div>
 
-  <div id="black">
+	<div id="black">
 		<div id="blurb">
 			<div id="present" class="blurb-text">
 				<h3>Current Occupation</h3>
-				<p>I design embodied <b>research environments</b> as an <b>Environment Designer</b> at <a href="https://deepmind.com/">DeepMind</a>. DeepMind wants to '<b>solve intelligence</b> to advance science and benefit humanity'.</p>
+				<p>I design embodied <b>research environments</b> as an <b>Environment Designer</b> at <a
+						href="https://deepmind.com/">DeepMind</a>. DeepMind wants to '<b>solve intelligence</b> to
+					advance science and benefit humanity'.</p>
 			</div>
 			<div id="future" class="blurb-text">
 				<h3>Main Interests</h3>
-				<p>I strive to design <b>playful environments</b> that facilitate human interaction. I'm also interested in <b>emergent social dynamics</b> in complex systems with cooperative and competitive elements.</p>
+				<p>I strive to design <b>playful environments</b> that facilitate human interaction. I'm also interested
+					in <b>emergent social dynamics</b> in complex systems with cooperative and competitive elements.</p>
 			</div>
-      <div id="past" class="blurb-text2">
-        <h3>Past Endeavours</h3>
-        <p>I founded <a href="http://www.fairytale-distillery.com/">Fairytale Distillery</a> and designed the competitive online game <a href="http://www.the-exiled.co">The Exiled</a>. Before that I co-founded the <a href="http://www.bitbarons.com/">Bit Barons</a> and organized events like <a href="http://www.gamecampmunich.de/">GameCamp Munich</a> and <a href="http://www.globalgamejam.org">Global Game Jam</a>.</p>
-      </div>
+			<div id="past" class="blurb-text2">
+				<h3>Past Endeavours</h3>
+				<p>I founded <a href="http://www.fairytale-distillery.com/">Fairytale Distillery</a> and designed the
+					competitive online game <a href="http://www.the-exiled.co">The Exiled</a>. Before that I co-founded
+					the <a href="http://www.bitbarons.com/">Bit Barons</a> and organized events like <a
+						href="http://www.gamecampmunich.de/">GameCamp Munich</a> and <a
+						href="http://www.globalgamejam.org">Global Game Jam</a>.</p>
+			</div>
 		</div>
 	</div>
 
@@ -97,7 +116,7 @@
 		<div id="papers" class="text-list">
 			<h4>Papers</h4>
 			<table width="100%">
-		        <tr>
+				<tr>
 					<td class="title"><strong>Human-Timescale Adaptation in an Open-Ended Task Space</strong></td>
 					<td class="inline_cell">Adaptive Agent Team<span>,</span></td>
 					<!--<td class="inline_cell">DeepMind<span>,</span></td>-->
@@ -119,14 +138,16 @@
 						</a>
 					</td>
 				</tr>
-		        <tr>
-					<td class="title"><strong>Learning Robust Real-Time Cultural Transmission without Human Data</strong></td>
+				<tr>
+					<td class="title"><strong>Learning Robust Real-Time Cultural Transmission without Human
+							Data</strong></td>
 					<td class="inline_cell">Cultural General Intelligence Team<span>,</span></td>
 					<!--<td class="inline_cell">DeepMind<span>,</span></td>-->
 					<td class="inline_cell">2022</td>
 					<td class="sep_cell"></td>
 					<td class="spaced icons">
-						<a href="https://www.deepmind.com/blog/learning-robust-real-time-cultural-transmission-without-human-data">
+						<a
+							href="https://www.deepmind.com/blog/learning-robust-real-time-cultural-transmission-without-human-data">
 							<img src="assets/icon_video_black.png">
 						</a>
 					</td>
@@ -161,7 +182,7 @@
 					<p class="caption">2013-2017</p>
 				</a>
 			</div>
-	        <div class="thumbnail-list2">
+			<div class="thumbnail-list2">
 				<img src="assets/push.jpg">
 				<a href="http://push.vg">
 					<h5>Push</h5>
@@ -170,7 +191,7 @@
 			</div>
 			<div class="thumbnail-list">
 				<!--<iframe width="300" height="169" src="//www.youtube.com/embed/o6_3lXmSNRw?rel=0&controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>-->
-   		        <div class="youtube-player" data-id="o6_3lXmSNRw"></div>
+				<div class="youtube-player" data-id="o6_3lXmSNRw"></div>
 				<a href="https://itunes.apple.com/us/app/san-juan/id513228980?mt=8">
 					<h5>San Juan</h5>
 					<p class="caption">2012</p>
@@ -178,26 +199,26 @@
 			</div>
 			<div class="thumbnail-list">
 				<!--<iframe width="300" height="169" src="//www.youtube.com/embed/CQtMPMdnvXA?rel=0&controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>-->
-       			<div class="youtube-player" data-id="CQtMPMdnvXA"></div>
+				<div class="youtube-player" data-id="CQtMPMdnvXA"></div>
 				<a href="http://astroslugs.com/">
 					<h5>Astroslugs</h5>
 					<p class="caption">2009 - 2011</p>
 				</a>
 			</div>
 			<br>
-        <div class="spacer"></div>
+			<div class="spacer"></div>
 			<div class="morelink"><a id="toggleLink" href=""><strong>show full list</strong></a></div>
 		</div>
 
 		<script>
-			$("#toggleLink").click(function() {
-			  $("#moregames").slideToggle("slow");
-			  if ($(this).html() === 'show full list') {
+			$("#toggleLink").click(function () {
+				$("#moregames").slideToggle("slow");
+				if ($(this).html() === 'show full list') {
 					$(this).html('close list');
 				} else {
 					$(this).html('show full list');
 				};
-			  return false;
+				return false;
 			});
 
 		</script>
@@ -205,58 +226,59 @@
 		<div id="moregames">
 			<div class="thumbnail-list-small">
 				<a href="https://dbltnk.itch.io/connie-weis-lab">
-				<img src="assets/moregames_dr-connie.png">
-				<h5>Dr. Connie Wei's Lab</h5>
-				<p class="caption">2022</p>
+					<img src="assets/moregames_dr-connie.png">
+					<h5>Dr. Connie Wei's Lab</h5>
+					<p class="caption">2022</p>
 				</a>
 			</div>
 			<div class="thumbnail-list-small">
 				<a href="https://globalgamejam.org/2020/games/defract-6">
-				<img src="assets/moregames_defract.jpg">
-				<h5>Defract</h5>
-				<p class="caption">2020</p>
+					<img src="assets/moregames_defract.jpg">
+					<h5>Defract</h5>
+					<p class="caption">2020</p>
 				</a>
 			</div>
 			<div class="thumbnail-list-small">
 				<a href="https://globalgamejam.org/2019/games/plmates">
-				<img src="assets/plates.jpg">
-				<h5>Pl(m)ates</h5>
-				<p class="caption">2019</p>
+					<img src="assets/plates.jpg">
+					<h5>Pl(m)ates</h5>
+					<p class="caption">2019</p>
 				</a>
 			</div>
 			<div class="thumbnail-list-small">
-				<a href="https://docs.google.com/document/d/1ptjLy-6AwunkdsHxCMmBe7-332RY27F7qczOlpInawQ/edit?fbclid=IwAR3gtYSCqLhwfOKgLAlAW6Yx9qtSj0iIzbS9cUPNqwdy-SryDqzpyWxZTus#heading=h.s5bsy8qtfspe">
-				<img src="assets/sdcg.jpg">
-				<h5>SDCG</h5>
-				<p class="caption">2019</p>
+				<a
+					href="https://docs.google.com/document/d/1ptjLy-6AwunkdsHxCMmBe7-332RY27F7qczOlpInawQ/edit?fbclid=IwAR3gtYSCqLhwfOKgLAlAW6Yx9qtSj0iIzbS9cUPNqwdy-SryDqzpyWxZTus#heading=h.s5bsy8qtfspe">
+					<img src="assets/sdcg.jpg">
+					<h5>SDCG</h5>
+					<p class="caption">2019</p>
 				</a>
 			</div>
 			<div class="thumbnail-list-small">
 				<a href="https://globalgamejam.org/2018/games/rapid-transmission-strategy">
-				<img src="assets/rts.jpg">
-				<h5>RTS</h5>
-				<p class="caption">2018</p>
+					<img src="assets/rts.jpg">
+					<h5>RTS</h5>
+					<p class="caption">2018</p>
 				</a>
 			</div>
 			<div class="thumbnail-list-small">
 				<a href="http://globalgamejam.org/2017/games/ripples-0">
-				<img src="assets/ripples.jpg">
-				<h5>Ripples</h5>
-				<p class="caption">2017</p>
+					<img src="assets/ripples.jpg">
+					<h5>Ripples</h5>
+					<p class="caption">2017</p>
 				</a>
 			</div>
 			<div class="thumbnail-list-small">
 				<a href="http://globalgamejam.org/2016/games/red-vs-blue-formerly-known-twitch-vs-twitch">
-				<img src="assets/moregames_ggj16.jpg">
-				<h5>Red vs. Blue</h5>
-				<p class="caption">2016</p>
+					<img src="assets/moregames_ggj16.jpg">
+					<h5>Red vs. Blue</h5>
+					<p class="caption">2016</p>
 				</a>
 			</div>
 			<div class="thumbnail-list-small">
 				<a href="https://dbltnk.itch.io/project-alice">
-				<img src="assets/alice.jpg">
-				<h5>Project Alice</h5>
-				<p class="caption">2014</p>
+					<img src="assets/alice.jpg">
+					<h5>Project Alice</h5>
+					<p class="caption">2014</p>
 				</a>
 			</div>
 			<div class="thumbnail-list-small">
@@ -301,7 +323,7 @@
 					<p class="caption">2013</p>
 				</a>
 			</div>
-     		<div class="thumbnail-list-small">
+			<div class="thumbnail-list-small">
 				<a href="http://tridek.com/">
 					<img src="assets/tridek.jpg">
 					<h5>Tridek</h5>
@@ -423,10 +445,10 @@
 		</div>
 		<div class="line"></div>
 
-    <div id="talks" class="text-list">
+		<div id="talks" class="text-list">
 			<h4>Talks</h4>
 			<table width="100%">
-		        <tr>
+				<tr>
 					<td class="title"><strong>Making an MMO on a dime</strong></td>
 					<td class="inline_cell">Quo Vadis<span>,</span></td>
 					<td class="inline_cell">Berlin<span>,</span></td>
@@ -434,17 +456,19 @@
 					<td class="sep_cell"></td>
 					<td class="spaced icons"><img src="assets/icon_video_grey.png"></td>
 					<td class="icons">
-						<a href="https://docs.google.com/presentation/d/1Wy8sBGQjjwh3tlt8FmIQXQkVtzkr2p9Czczq-DA35BQ/edit?usp=sharing">
+						<a
+							href="https://docs.google.com/presentation/d/1Wy8sBGQjjwh3tlt8FmIQXQkVtzkr2p9Czczq-DA35BQ/edit?usp=sharing">
 							<img src="assets/icon_slides_black.png">
 						</a>
 					</td>
 					<td class="icons">
-						<a href="http://www.golem.de/news/entwicklerstudios-cloud-git-und-die-bierliste-1504-113649.html">
+						<a
+							href="http://www.golem.de/news/entwicklerstudios-cloud-git-und-die-bierliste-1504-113649.html">
 							<img src="assets/icon_report_black.png">
 						</a>
 					</td>
 				</tr>
-       			<tr>
+				<tr>
 					<td class="title"><strong>Mechanics are the Message</strong></td>
 					<td class="inline_cell">Games-Tagung<span>,</span></td>
 					<td class="inline_cell">Munich<span>,</span></td>
@@ -456,52 +480,55 @@
 							<img src="assets/icon_slides_black.png">
 						</a>
 					</td>
-          			<td class="icons"><img src="assets/icon_report_grey.png"></td>
+					<td class="icons"><img src="assets/icon_report_grey.png"></td>
 				</tr>
-        		<tr>
-					<td class="title"><strong>Going Indie is a Marathon - Staying Motivated for the Long Run (Panel)</strong></td>
+				<tr>
+					<td class="title"><strong>Going Indie is a Marathon - Staying Motivated for the Long Run
+							(Panel)</strong></td>
 					<td class="inline_cell">Respawn Conference<span>,</span></td>
 					<td class="inline_cell">Cologne<span>,</span></td>
 					<td class="inline_cell">2014</td>
 					<td class="sep_cell"></td>
 					<td class="spaced icons"><img src="assets/icon_video_grey.png"></td>
-								<td class="icons"><img src="assets/icon_slides_grey.png"></td>
+					<td class="icons"><img src="assets/icon_slides_grey.png"></td>
 					<td class="icons">
 						<a href="http://respawngathering.com/sched/event/4/238nd7j4aov7drheo2i3sdord0">
-						<img src="assets/icon_report_black.png">
+							<img src="assets/icon_report_black.png">
 						</a>
 					</td>
 				</tr>
 				<tr>
-				<td class="title"><strong>Gender (and Diversity) design in video games (Panel)</strong></td>
-				<td class="inline_cell">Respawn Conference<span>,</span></td>
-				<td class="inline_cell">Cologne<span>,</span></td>
-				<td class="inline_cell">2014</td>
-				<td class="sep_cell"></td>
-				<td class="spaced icons"><img src="assets/icon_video_grey.png"></td>
-				<td class="icons"><img src="assets/icon_slides_grey.png"></td>
-				<td class="icons">
-					<a href="http://respawngathering.com/sched/event/3/bt9l6058e6kaobng9m6ruqtt7c">
-					<img src="assets/icon_report_black.png">
-					</a>
-				</td>
+					<td class="title"><strong>Gender (and Diversity) design in video games (Panel)</strong></td>
+					<td class="inline_cell">Respawn Conference<span>,</span></td>
+					<td class="inline_cell">Cologne<span>,</span></td>
+					<td class="inline_cell">2014</td>
+					<td class="sep_cell"></td>
+					<td class="spaced icons"><img src="assets/icon_video_grey.png"></td>
+					<td class="icons"><img src="assets/icon_slides_grey.png"></td>
+					<td class="icons">
+						<a href="http://respawngathering.com/sched/event/3/bt9l6058e6kaobng9m6ruqtt7c">
+							<img src="assets/icon_report_black.png">
+						</a>
+					</td>
 				</tr>
 				<tr>
-				<td class="title"><strong>That Jam we're in - A discussion on potentials and limits of Game Jams (Panel)</strong></td>
-				<td class="inline_cell">Respawn Conference<span>,</span></td>
-				<td class="inline_cell">Cologne<span>,</span></td>
-				<td class="inline_cell">2014</td>
-				<td class="sep_cell"></td>
-				<td class="spaced icons"><img src="assets/icon_video_grey.png"></td>
-				<td class="icons"><img src="assets/icon_slides_grey.png"></td>
-				<td class="icons">
-					<a href="http://respawngathering.com/sched/event/4/slddqmqqublv1btuth9epla1ro">
-					<img src="assets/icon_report_black.png">
-					</a>
-				</td>
+					<td class="title"><strong>That Jam we're in - A discussion on potentials and limits of Game Jams
+							(Panel)</strong></td>
+					<td class="inline_cell">Respawn Conference<span>,</span></td>
+					<td class="inline_cell">Cologne<span>,</span></td>
+					<td class="inline_cell">2014</td>
+					<td class="sep_cell"></td>
+					<td class="spaced icons"><img src="assets/icon_video_grey.png"></td>
+					<td class="icons"><img src="assets/icon_slides_grey.png"></td>
+					<td class="icons">
+						<a href="http://respawngathering.com/sched/event/4/slddqmqqublv1btuth9epla1ro">
+							<img src="assets/icon_report_black.png">
+						</a>
+					</td>
 				</tr>
 				<tr>
-					<td class="title"><strong>Managing the Unspeakable - One Year of Pre-Pro for the Indie-MMO</strong></td>
+					<td class="title"><strong>Managing the Unspeakable - One Year of Pre-Pro for the Indie-MMO</strong>
+					</td>
 					<td class="inline_cell">Quo Vadis<span>,</span></td>
 					<td class="inline_cell">Berlin<span>,</span></td>
 					<td class="inline_cell">2014</td>
@@ -513,7 +540,8 @@
 						</a>
 					</td>
 					<td class="icons">
-						<a href="http://www.4players.de/4players.php/spielinfonews/Allgemein/35574/2139907/Das_TalQuo_Vadis_2014_Das_Unmoegliche_schaffen.html">
+						<a
+							href="http://www.4players.de/4players.php/spielinfonews/Allgemein/35574/2139907/Das_TalQuo_Vadis_2014_Das_Unmoegliche_schaffen.html">
 							<img src="assets/icon_report_black.png">
 						</a>
 					</td>
@@ -591,7 +619,8 @@
 						</a>
 					</td>
 					<td class="icons">
-						<a href="http://www.gamasutra.com/view/news/36567/GDC_Europe_The_Art_Of_Public_Funding_For_Indie_Games.php">
+						<a
+							href="http://www.gamasutra.com/view/news/36567/GDC_Europe_The_Art_Of_Public_Funding_For_Indie_Games.php">
 							<img src="assets/icon_report_black.png">
 						</a>
 					</td>
@@ -605,7 +634,8 @@
 					<td class="spaced icons"><img src="assets/icon_video_grey.png"></td>
 					<td class="icons"><img src="assets/icon_slides_grey.png"></td>
 					<td class="icons">
-						<a href="http://www.partnertrans.com/news/news-details/article/panel-diskussion-auf-der-quo-vadis.html">
+						<a
+							href="http://www.partnertrans.com/news/news-details/article/panel-diskussion-auf-der-quo-vadis.html">
 							<img src="assets/icon_report_black.png">
 						</a>
 					</td>
@@ -628,13 +658,13 @@
 		</div>
 
 		<div id="events">
-		<h4>Events</h4>
+			<h4>Events</h4>
 			<div class="thumbnail-list">
-			<a href="https://www.eventbrite.com/e/more-women-in-games-brunch-1-registration-44682115410">
-				<img src="assets/events_mwigb.jpg">
-				<h5>More Women in Games Brunch</h5>
-				<p class="caption">2018</p>
-			</a>
+				<a href="https://www.eventbrite.com/e/more-women-in-games-brunch-1-registration-44682115410">
+					<img src="assets/events_mwigb.jpg">
+					<h5>More Women in Games Brunch</h5>
+					<p class="caption">2018</p>
+				</a>
 			</div>
 			<div class="thumbnail-list">
 				<a href="https://www.meetup.com/gamedevmuc/">
@@ -650,7 +680,7 @@
 					<p class="caption">since 2010</p>
 				</a>
 			</div>
-				<div class="thumbnail-list">
+			<div class="thumbnail-list">
 				<a href="http://www.meetup.com/munich-indie/">
 					<img src="assets/events_5_unityug.jpg">
 					<h5>Unity Usergroup</h5>
@@ -681,12 +711,12 @@
 		</div>
 
 		<div id="workshops" class="text-list">
-		<h4>Teaching</h4>
+			<h4>Teaching</h4>
 			<table width="100%">
 				<tr>
 					<td class="title"><strong>Introduction to Game Design (Bachelor Game Art) </strong></td>
 					<td class="inline_cell" style="line-height:1.5">full course<span>,&nbsp;</span></td>
-					<td class="spaced inline_cell" >SAE Games<span>,</span></td>
+					<td class="spaced inline_cell">SAE Games<span>,</span></td>
 					<td class="inline_cell">2013</td>
 					<td class="sep_cell"></td>
 					<td class="spaced icons"><img src="assets/icon_video_grey.png"></td>
@@ -716,13 +746,15 @@
 				<tr>
 					<td class="title"><strong>Vom klassischen Gesellschaftsspiel zum Digitalspiel</strong></td>
 					<td class="inline_cell">workshop<span>,&nbsp;</span></td>
-					<td class="spaced inline_cell" style="line-height: 1.5">Deutsche Spieleautorentagung<span>,</span></td>
+					<td class="spaced inline_cell" style="line-height: 1.5">Deutsche Spieleautorentagung<span>,</span>
+					</td>
 					<td class="inline_cell">2011</td>
 					<td class="sep_cell"></td>
 					<td class="spaced icons"><img src="assets/icon_video_grey.png"></td>
 					<td class="icons"><img src="assets/icon_slides_grey.png"></td>
 					<td class="icons">
-						<a href="http://www.spieleautorentagung.de/uebergreifende-themen/vom-klassischen-gesellschaftsspiel-zum-digitalspiel">
+						<a
+							href="http://www.spieleautorentagung.de/uebergreifende-themen/vom-klassischen-gesellschaftsspiel-zum-digitalspiel">
 							<img src="assets/icon_report_black.png">
 						</a>
 					</td>
@@ -751,19 +783,20 @@
 		</div>
 
 		<div id="articles">
-		<h4>Articles</h4>
+			<h4>Articles</h4>
 			<div class="thumbnail-list">
-				<a href="http://www.gamasutra.com/blogs/AlexanderZacherl/20150929/254790/9_Survival_Strategies_for_Developers_in_Times_of_the_Indiepocalypse.php">
-				<img src="assets/articles_survival_strats.jpg">
-				<h5>Survival Strategies for Developers</h5>
-				<p class="caption">2015</p>
+				<a
+					href="http://www.gamasutra.com/blogs/AlexanderZacherl/20150929/254790/9_Survival_Strategies_for_Developers_in_Times_of_the_Indiepocalypse.php">
+					<img src="assets/articles_survival_strats.jpg">
+					<h5>Survival Strategies for Developers</h5>
+					<p class="caption">2015</p>
 				</a>
 			</div>
 			<div class="thumbnail-list">
 				<a href="https://medium.com/@dbltnk/compression-cutting-out-the-fat-7c221888d8b2">
-				<img src="assets/articles_lean_mmo.jpg">
-				<h5>The Lean MMO(RPG)</h5>
-				<p class="caption">2015</p>
+					<img src="assets/articles_lean_mmo.jpg">
+					<h5>The Lean MMO(RPG)</h5>
+					<p class="caption">2015</p>
 				</a>
 			</div>
 			<div class="thumbnail-list2">
@@ -774,14 +807,14 @@
 				</a>
 			</div>
 			<div class="thumbnail-list">
-			<a href="http://www.makinggames.de/index.php/magazin/1881_1000_tage_indie">
+				<a href="http://www.makinggames.de/index.php/magazin/1881_1000_tage_indie">
 					<img src="assets/articles_2_1000days.jpg">
 					<h5>1000 Tage Indie</h5>
 					<p class="caption">2012</p>
 				</a>
 			</div>
 			<div class="thumbnail-list">
-			<a href="https://medium.com/p/a3533e87ef24">
+				<a href="https://medium.com/p/a3533e87ef24">
 					<img src="assets/articles_3_distanz.jpg">
 					<h5>Meine kritische Distanz</h5>
 					<p class="caption">2011</p>
@@ -789,227 +822,249 @@
 			</div>
 		</div>
 
-  <div id="interviews" class="text-list">
-  <h4>Interviews</h4>
-    <table width="100%">
-      <tr>
-        <td class="title"><strong>OPNnoobs</strong></td>
-        <td class="inline_cell">Frederic Brizzi<span>,</span></td>
-        <td class="inline_cell">English<span>,</span></td>
-        <td class="year inline_cell">2016</td>
-		<td class="sep_cell"></td>
-        <td class="first icons">
-          <a href="https://www.youtube.com/watch?v=AzsNP3W46Vk">
-            <img src="assets/icon_video_black.png"></td>
-          </a>
-        <td class="icons"><img src="assets/icon_audio_grey.png"></td>
-        <td class="icons"><img src="assets/icon_report_grey.png"></td>
-      </tr>
-      <tr>
-        <td class="titles"><strong>Gaiscioch Magazine</strong></td>
-        <td class="inline_cell">Benjamin Foley<span>,</span></td>
-        <td class="inline_cell">English<span>,</span></td>
-        <td class="year inline_cell">2016</td>
-		<td class="sep_cell"></td>
-        <td class="first icons"><img src="assets/icon_video_grey.png"></td>
-        <td class="icons"><img src="assets/icon_audio_grey.png"></td>
-        <td class="icons">
-          <a href="http://magazine.gaiscioch.com/features/das_tal_brings_pvp_to_new_heights.html">
-            <img src="assets/icon_report_black.png"></td>
-          </a>
-      </tr>
-      <tr>
-        <td class="title"><strong>Süddeutsche Zeitung</strong></td>
-        <td class="inline_cell">Jan Bojaryn<span>,</span></td>
-        <td class="inline_cell">German<span>,</span></td>
-        <td class="year inline_cell">2015</td>
-		<td class="sep_cell"></td>
-        <td class="first icons"><img src="assets/icon_video_grey.png"></td>
-        <td class="icons"><img src="assets/icon_audio_grey.png"></td>
-        <td class="icons">
-          <a href="http://www.sueddeutsche.de/digital/muenchner-computerspiel-start-up-spiele-entwickeln-am-abgrund-1.2494020">
-            <img src="assets/icon_report_black.png"></td>
-          </a>
-      </tr>
-      <tr>
-        <td class="title"><strong>Gamestar TV</strong></td>
-        <td class="inline_cell">Sebastian Stange<span>,</span></td>
-        <td class="inline_cell">German<span>,</span></td>
-        <td class="year inline_cell">2015</td>
-		<td class="sep_cell"></td>
-        <td class="first icons">
-          <a href="http://www.gamestar.de/news/vermischtes/3086303/gamestar_tv.html">
-            <img src="assets/icon_video_black.png"></td>
-          </a>
-        <td class="icons"><img src="assets/icon_audio_grey.png"></td>
-        <td class="icons"><img src="assets/icon_report_grey.png"></td>
-      </tr>
-      <tr>
-        <td class="title"><strong>Insert Moin</strong></td>
-        <td class="inline_cell">Daniel Raumer<span>,</span></td>
-        <td class="inline_cell">German<span>,</span></td>
-        <td class="year inline_cell">2015</td>
-		<td class="sep_cell"></td>
-        <td class="first icons"><img src="assets/icon_video_grey.png"></td>
-        <td class="icons">
-            <a href="http://insertmoin.de/im1287-interview-das-tal/">
-              <img src="assets/icon_audio_black.png"></td>
-            </a>
-        <td class="icons"><img src="assets/icon_report_grey.png"></td>
-      </tr>
-      <tr>
-        <td class="title"><strong>Techdings</strong></td>
-        <td class="inline_cell">Andree Huk<span>,</span></td>
-        <td class="inline_cell">German<span>,</span></td>
-        <td class="year inline_cell">2015</td>
-		<td class="sep_cell"></td>
-        <td class="first icons"><img src="assets/icon_video_grey.png"></td>
-        <td class="icons">
-            <a href="http://www.techdings.com/2015/11/v63-0-alex-zacherl-ceo-von-mmorpg-das-tal/">
-              <img src="assets/icon_audio_black.png"></td>
-            </a>
-        <td class="icons"><img src="assets/icon_report_grey.png"></td>
-      </tr>
-      <tr>
-        <td class="title"><strong>Level UB</strong></td>
-        <td class="inline_cell">Paul Redetzky<span>,</span></td>
-        <td class="inline_cell">German<span>,</span></td>
-        <td class="year inline_cell">2015</td>
-		<td class="sep_cell"></td>
-        <td class="first icons">
-          <a href="https://www.youtube.com/watch?v=ET5sgqDT19U">
-            <img src="assets/icon_video_black.png"></td>
-          </a>
-        <td class="icons"><img src="assets/icon_audio_grey.png"></td>
-        <td class="icons"><img src="assets/icon_report_grey.png"></td>
-      </tr>
-      <tr>
-        <td class="title"><strong>medien.bayern</strong></td>
-        <td class="inline_cell">Richard Löwenstein<span>,</span></td>
-        <td class="inline_cell">German<span>,</span></td>
-        <td class="year inline_cell">2014</td>
-		<td class="sep_cell"></td>
-        <td class="first icons"><img src="assets/icon_video_grey.png"></td>
-        <td class="icons"><img src="assets/icon_audio_grey.png"></td>
-        <td class="icons">
-          <a href="http://www.mediennetzwerk-bayern.de/2060/zu-besuch-bei-alexander-zacherl-zachibert-und-die-indieklitsche/">
-            <img src="assets/icon_report_black.png"></td>
-          </a>
-      </tr>
-      <tr>
-        <td class="title"><strong>Gamebolds</strong></td>
-        <td class="inline_cell">Robert Fischer<span>,</span></td>
-        <td class="inline_cell">German<span>,</span></td>
-        <td class="year inline_cell">2014</td>
-		<td class="sep_cell"></td>
-        <td class="first icons"><img src="assets/icon_video_grey.png"></td>
-        <td class="icons"><img src="assets/icon_audio_grey.png"></td>
-        <td class="icons">
-          <a href="http://gamebolds.de/spezial/das-tal-indie-entwickler-alexander-zacherl-im-gamebolds-interview/25783">
-            <img src="assets/icon_report_black.png"></td>
-          </a>
-      </tr>
-      <tr>
-        <td class="title"><strong>Mein MMO</strong></td>
-        <td class="inline_cell">Gerd Schuhmann<span>,</span></td>
-        <td class="inline_cell">German<span>,</span></td>
-        <td class="year inline_cell">2014</td>
-		<td class="sep_cell"></td>
-        <td class="first icons"><img src="assets/icon_video_grey.png"></td>
-        <td class="icons"><img src="assets/icon_audio_grey.png"></td>
-        <td class="icons">
-          <a href="http://mein-mmo.de/mein-mmo-interview-das-tal-sandbox-pvp-aus-muenchen067/">
-            <img src="assets/icon_report_black.png"></td>
-          </a>
-      </tr>
-      <tr>
-        <td class="title"><strong>MMORPG.com</strong></td>
-        <td class="inline_cell">Gareth Harmer<span>,</span></td>
-        <td class="inline_cell">English<span>,</span></td>
-        <td class="year inline_cell">2014</td>
-		<td class="sep_cell"></td>
-        <td class="first icons"><img src="assets/icon_video_grey.png"></td>
-        <td class="icons"><img src="assets/icon_audio_grey.png"></td>
-        <td class="icons">
-          <a href="http://www.mmorpg.com/gamelist.cfm/game/1083/feature/8861/Understanding-the-Approach.html/page/1">
-            <img src="assets/icon_report_black.png"></td>
-          </a>
-      </tr>
-      <tr>
-        <td class="title"><strong>Promoter</strong></td>
-        <td class="inline_cell">Andreas Zecher<span>,</span></td>
-        <td class="inline_cell">English<span>,</span></td>
-        <td class="year inline_cell">2012</td>
-		<td class="sep_cell"></td>
-        <td class="first icons"><img src="assets/icon_video_grey.png"></td>
-        <td class="icons"><img src="assets/icon_audio_grey.png"></td>
-        <td class="icons">
-          <a href="https://www.promoterapp.com/blog/interview-bit-barons-on-astroslugs-funding-portals-and-publishers">
-            <img src="assets/icon_report_black.png"></td>
-          </a>
-      </tr>
-      <tr>
-        <td class="title"><strong>Techdings</strong></td>
-        <td class="inline_cell">Andree Huk<span>,</span></td>
-        <td class="inline_cell">German<span>,</span></td>
-        <td class="year inline_cell">2011</td>
-		<td class="sep_cell"></td>
-        <td class="first icons"><img src="assets/icon_video_grey.png"></td>
-        <td class="icons">
-            <a href="http://www.techdings.com/2011/07/009-techdings-com-mit-alex-zacherl-von-den-bitbarons/">
-              <img src="assets/icon_audio_black.png"></td>
-            </a>
-        <td class="icons"><img src="assets/icon_report_grey.png"></td>
-      </tr>
-    </table>
-  </div>
+		<div id="interviews" class="text-list">
+			<h4>Interviews</h4>
+			<table width="100%">
+				<tr>
+					<td class="title"><strong>OPNnoobs</strong></td>
+					<td class="inline_cell">Frederic Brizzi<span>,</span></td>
+					<td class="inline_cell">English<span>,</span></td>
+					<td class="year inline_cell">2016</td>
+					<td class="sep_cell"></td>
+					<td class="first icons">
+						<a href="https://www.youtube.com/watch?v=AzsNP3W46Vk">
+							<img src="assets/icon_video_black.png">
+					</td>
+					</a>
+					<td class="icons"><img src="assets/icon_audio_grey.png"></td>
+					<td class="icons"><img src="assets/icon_report_grey.png"></td>
+				</tr>
+				<tr>
+					<td class="titles"><strong>Gaiscioch Magazine</strong></td>
+					<td class="inline_cell">Benjamin Foley<span>,</span></td>
+					<td class="inline_cell">English<span>,</span></td>
+					<td class="year inline_cell">2016</td>
+					<td class="sep_cell"></td>
+					<td class="first icons"><img src="assets/icon_video_grey.png"></td>
+					<td class="icons"><img src="assets/icon_audio_grey.png"></td>
+					<td class="icons">
+						<a href="http://magazine.gaiscioch.com/features/das_tal_brings_pvp_to_new_heights.html">
+							<img src="assets/icon_report_black.png">
+					</td>
+					</a>
+				</tr>
+				<tr>
+					<td class="title"><strong>Süddeutsche Zeitung</strong></td>
+					<td class="inline_cell">Jan Bojaryn<span>,</span></td>
+					<td class="inline_cell">German<span>,</span></td>
+					<td class="year inline_cell">2015</td>
+					<td class="sep_cell"></td>
+					<td class="first icons"><img src="assets/icon_video_grey.png"></td>
+					<td class="icons"><img src="assets/icon_audio_grey.png"></td>
+					<td class="icons">
+						<a
+							href="http://www.sueddeutsche.de/digital/muenchner-computerspiel-start-up-spiele-entwickeln-am-abgrund-1.2494020">
+							<img src="assets/icon_report_black.png">
+					</td>
+					</a>
+				</tr>
+				<tr>
+					<td class="title"><strong>Gamestar TV</strong></td>
+					<td class="inline_cell">Sebastian Stange<span>,</span></td>
+					<td class="inline_cell">German<span>,</span></td>
+					<td class="year inline_cell">2015</td>
+					<td class="sep_cell"></td>
+					<td class="first icons">
+						<a href="http://www.gamestar.de/news/vermischtes/3086303/gamestar_tv.html">
+							<img src="assets/icon_video_black.png">
+					</td>
+					</a>
+					<td class="icons"><img src="assets/icon_audio_grey.png"></td>
+					<td class="icons"><img src="assets/icon_report_grey.png"></td>
+				</tr>
+				<tr>
+					<td class="title"><strong>Insert Moin</strong></td>
+					<td class="inline_cell">Daniel Raumer<span>,</span></td>
+					<td class="inline_cell">German<span>,</span></td>
+					<td class="year inline_cell">2015</td>
+					<td class="sep_cell"></td>
+					<td class="first icons"><img src="assets/icon_video_grey.png"></td>
+					<td class="icons">
+						<a href="http://insertmoin.de/im1287-interview-das-tal/">
+							<img src="assets/icon_audio_black.png">
+					</td>
+					</a>
+					<td class="icons"><img src="assets/icon_report_grey.png"></td>
+				</tr>
+				<tr>
+					<td class="title"><strong>Techdings</strong></td>
+					<td class="inline_cell">Andree Huk<span>,</span></td>
+					<td class="inline_cell">German<span>,</span></td>
+					<td class="year inline_cell">2015</td>
+					<td class="sep_cell"></td>
+					<td class="first icons"><img src="assets/icon_video_grey.png"></td>
+					<td class="icons">
+						<a href="http://www.techdings.com/2015/11/v63-0-alex-zacherl-ceo-von-mmorpg-das-tal/">
+							<img src="assets/icon_audio_black.png">
+					</td>
+					</a>
+					<td class="icons"><img src="assets/icon_report_grey.png"></td>
+				</tr>
+				<tr>
+					<td class="title"><strong>Level UB</strong></td>
+					<td class="inline_cell">Paul Redetzky<span>,</span></td>
+					<td class="inline_cell">German<span>,</span></td>
+					<td class="year inline_cell">2015</td>
+					<td class="sep_cell"></td>
+					<td class="first icons">
+						<a href="https://www.youtube.com/watch?v=ET5sgqDT19U">
+							<img src="assets/icon_video_black.png">
+					</td>
+					</a>
+					<td class="icons"><img src="assets/icon_audio_grey.png"></td>
+					<td class="icons"><img src="assets/icon_report_grey.png"></td>
+				</tr>
+				<tr>
+					<td class="title"><strong>medien.bayern</strong></td>
+					<td class="inline_cell">Richard Löwenstein<span>,</span></td>
+					<td class="inline_cell">German<span>,</span></td>
+					<td class="year inline_cell">2014</td>
+					<td class="sep_cell"></td>
+					<td class="first icons"><img src="assets/icon_video_grey.png"></td>
+					<td class="icons"><img src="assets/icon_audio_grey.png"></td>
+					<td class="icons">
+						<a
+							href="http://www.mediennetzwerk-bayern.de/2060/zu-besuch-bei-alexander-zacherl-zachibert-und-die-indieklitsche/">
+							<img src="assets/icon_report_black.png">
+					</td>
+					</a>
+				</tr>
+				<tr>
+					<td class="title"><strong>Gamebolds</strong></td>
+					<td class="inline_cell">Robert Fischer<span>,</span></td>
+					<td class="inline_cell">German<span>,</span></td>
+					<td class="year inline_cell">2014</td>
+					<td class="sep_cell"></td>
+					<td class="first icons"><img src="assets/icon_video_grey.png"></td>
+					<td class="icons"><img src="assets/icon_audio_grey.png"></td>
+					<td class="icons">
+						<a
+							href="http://gamebolds.de/spezial/das-tal-indie-entwickler-alexander-zacherl-im-gamebolds-interview/25783">
+							<img src="assets/icon_report_black.png">
+					</td>
+					</a>
+				</tr>
+				<tr>
+					<td class="title"><strong>Mein MMO</strong></td>
+					<td class="inline_cell">Gerd Schuhmann<span>,</span></td>
+					<td class="inline_cell">German<span>,</span></td>
+					<td class="year inline_cell">2014</td>
+					<td class="sep_cell"></td>
+					<td class="first icons"><img src="assets/icon_video_grey.png"></td>
+					<td class="icons"><img src="assets/icon_audio_grey.png"></td>
+					<td class="icons">
+						<a href="http://mein-mmo.de/mein-mmo-interview-das-tal-sandbox-pvp-aus-muenchen067/">
+							<img src="assets/icon_report_black.png">
+					</td>
+					</a>
+				</tr>
+				<tr>
+					<td class="title"><strong>MMORPG.com</strong></td>
+					<td class="inline_cell">Gareth Harmer<span>,</span></td>
+					<td class="inline_cell">English<span>,</span></td>
+					<td class="year inline_cell">2014</td>
+					<td class="sep_cell"></td>
+					<td class="first icons"><img src="assets/icon_video_grey.png"></td>
+					<td class="icons"><img src="assets/icon_audio_grey.png"></td>
+					<td class="icons">
+						<a
+							href="http://www.mmorpg.com/gamelist.cfm/game/1083/feature/8861/Understanding-the-Approach.html/page/1">
+							<img src="assets/icon_report_black.png">
+					</td>
+					</a>
+				</tr>
+				<tr>
+					<td class="title"><strong>Promoter</strong></td>
+					<td class="inline_cell">Andreas Zecher<span>,</span></td>
+					<td class="inline_cell">English<span>,</span></td>
+					<td class="year inline_cell">2012</td>
+					<td class="sep_cell"></td>
+					<td class="first icons"><img src="assets/icon_video_grey.png"></td>
+					<td class="icons"><img src="assets/icon_audio_grey.png"></td>
+					<td class="icons">
+						<a
+							href="https://www.promoterapp.com/blog/interview-bit-barons-on-astroslugs-funding-portals-and-publishers">
+							<img src="assets/icon_report_black.png">
+					</td>
+					</a>
+				</tr>
+				<tr>
+					<td class="title"><strong>Techdings</strong></td>
+					<td class="inline_cell">Andree Huk<span>,</span></td>
+					<td class="inline_cell">German<span>,</span></td>
+					<td class="year inline_cell">2011</td>
+					<td class="sep_cell"></td>
+					<td class="first icons"><img src="assets/icon_video_grey.png"></td>
+					<td class="icons">
+						<a
+							href="http://www.techdings.com/2011/07/009-techdings-com-mit-alex-zacherl-von-den-bitbarons/">
+							<img src="assets/icon_audio_black.png">
+					</td>
+					</a>
+					<td class="icons"><img src="assets/icon_report_grey.png"></td>
+				</tr>
+			</table>
+		</div>
 		<div id="film">
 			<h4>Film</h4>
 			<div class="thumbnail-list">
-        	<div class="youtube-player" data-id="nJ5Cb2hHyKk"></div>
+				<div class="youtube-player" data-id="nJ5Cb2hHyKk"></div>
 				<a href="http://www.growrillagame.com/">
 					<h5>Growrilla Launch Trailer</h5>
 					<p class="caption">Writing, Directing, Editing - 2019</p>
 				</a>
 			</div>
 		</div>
-  </div>
-  <div class="spacer"></div>
-  <div class="spacer"></div>
-  <div id="consulting">
-    <div id="contact">
-      <h4>Consulting</h4>
-        <p>I am currently only available for consulting in a very limited capacity. But feel free to <a href="mailto:alexander.zacherl@googlemail.com">get in touch</a> if I can help you with your project or product in small ways. I am not available for longer teaching engagements but might be interested in running a small workshop or giving a talk.</p>
-    </div>
-    <div id="clients" class="clients">
-      <h6>Select Clients</h6>
-      <div class="logo-list-small"><img src="assets/clients/tg2.png"></div>
-      <div class="logo-list-small"><img src="assets/clients/gl-logo.jpg"></div>
-      <div class="logo-list-small"><img src="assets/clients/rdi2.png"></div>
-      <div class="logo-list-small"><img src="assets/clients/kalypso-logo-blue.png"></div>
-      <div class="logo-list-small"><img src="assets/clients/simulogics.png"></div>
-      <div class="logo-list-small"><img src="assets/clients/rf2.png"></div>
-      <div class="logo-list-small"><img src="assets/clients/northworks.png"></div>
-      <div class="logo-list-small"><img src="assets/clients/dreamfab.png"></div>
-      <div class="logo-list-small"><img src="assets/clients/thg.png"></div>
-      <div class="logo-list-small"><img src="assets/clients/dgv-logo.png"></div>
-      <div class="logo-list-small"><img src="assets/clients/zj_logo.png"></div>
-      <div class="logo-list-small"><img src="assets/clients/wl-logo.png"></div>
-      <div class="logo-list-small"><img src="assets/clients/MAN_logo.png"></div>
-      <div class="logo-list-small"><img src="assets/clients/kulturreferat.png"></div>
-      <div class="logo-list-small"><img src="assets/clients/Mediadesign-Hochschule-Logo.png"></div>
-      <div class="logo-list-small"><img src="assets/clients/sae-institute-logo-4FB3DF8204-seeklogo.com.png"></div>
-      <div class="logo-list-small"><img src="assets/clients/jff2.png"></div>
-    </div>
-  </div>
+	</div>
+	<div class="spacer"></div>
+	<div class="spacer"></div>
+	<div id="consulting">
+		<div id="contact">
+			<h4>Consulting</h4>
+			<p>I am currently only available for consulting in a very limited capacity. But feel free to <a
+					href="mailto:alexander.zacherl@googlemail.com">get in touch</a> if I can help you with your project
+				or product in small ways. I am not available for longer teaching engagements but might be interested in
+				running a small workshop or giving a talk.</p>
+		</div>
+		<div id="clients" class="clients">
+			<h6>Select Clients</h6>
+			<div class="logo-list-small"><img src="assets/clients/tg2.png"></div>
+			<div class="logo-list-small"><img src="assets/clients/gl-logo.jpg"></div>
+			<div class="logo-list-small"><img src="assets/clients/rdi2.png"></div>
+			<div class="logo-list-small"><img src="assets/clients/kalypso-logo-blue.png"></div>
+			<div class="logo-list-small"><img src="assets/clients/simulogics.png"></div>
+			<div class="logo-list-small"><img src="assets/clients/rf2.png"></div>
+			<div class="logo-list-small"><img src="assets/clients/northworks.png"></div>
+			<div class="logo-list-small"><img src="assets/clients/dreamfab.png"></div>
+			<div class="logo-list-small"><img src="assets/clients/thg.png"></div>
+			<div class="logo-list-small"><img src="assets/clients/dgv-logo.png"></div>
+			<div class="logo-list-small"><img src="assets/clients/zj_logo.png"></div>
+			<div class="logo-list-small"><img src="assets/clients/wl-logo.png"></div>
+			<div class="logo-list-small"><img src="assets/clients/MAN_logo.png"></div>
+			<div class="logo-list-small"><img src="assets/clients/kulturreferat.png"></div>
+			<div class="logo-list-small"><img src="assets/clients/Mediadesign-Hochschule-Logo.png"></div>
+			<div class="logo-list-small"><img src="assets/clients/sae-institute-logo-4FB3DF8204-seeklogo.com.png"></div>
+			<div class="logo-list-small"><img src="assets/clients/jff2.png"></div>
+		</div>
+	</div>
 
 	<div id="footer">
 		<div id="contact">
 			<div class="floatL">
 				<img class="v_align" src="assets/alex.png">
 				<h3 class="v_align">
-				Contact me<br />
-				<a href="mailto: alexander.zacherl@googlemail.com">alexander.zacherl@googlemail.com</a><br />
+					Contact me<br />
+					<a href="mailto: alexander.zacherl@googlemail.com">alexander.zacherl@googlemail.com</a><br />
 				</h3>
 			</div>
 			<div class="floatR">
@@ -1017,10 +1072,11 @@
 				<a href="https://www.facebook.com/alexander.zacherl"><img src="assets/facebook.png"></a>
 				<a href="http://www.linkedin.com/in/alexanderzacherl"><img src="assets/linkedin.png"></a>
 				<a href="https://weheart.github.io/"><img src="assets/HEART_COLOR_TWITTER_19.png"></a>
-        <a href="http://love.indiearena.de/"><img src="assets/ia.png"></a>
-        <div id="hobbies">
-          <p>Talk to me about improv, systems design, games, politics, evolution, machine learning, entrepreneurship, the open web, journalism and cinematography.</p>
-        </div>
+				<a href="http://love.indiearena.de/"><img src="assets/ia.png"></a>
+				<div id="hobbies">
+					<p>Talk to me about improv, systems design, games, politics, evolution, machine learning,
+						entrepreneurship, the open web, journalism and cinematography.</p>
+				</div>
 			</div>
 		</div>
 	</div>

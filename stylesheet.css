@@ -122,11 +122,13 @@ td.title {
 	line-height: 1.5;
 }
 
-td.spaced, td.year {
+td.spaced,
+td.year {
 	padding-left: 50px;
 }
 
-td.inline_cell span, td.sep_cell {
+td.inline_cell span,
+td.sep_cell {
 	display: none;
 }
 
@@ -138,7 +140,7 @@ p {
 }
 
 strong {
-	font-weight:700;
+	font-weight: 700;
 }
 
 p.caption {
@@ -186,7 +188,8 @@ a.scroll:hover {
 
 }
 
-div.blurb-text, div.blurb-text2 {
+div.blurb-text,
+div.blurb-text2 {
 	width: 33%;
 	max-width: 300px;
 	color: #fff;
@@ -197,43 +200,50 @@ div.blurb-text {
 	padding-right: 15px;
 }
 
-div.thumbnail-list, div.thumbnail-list2 {
-	width: 100%; 
+div.thumbnail-list,
+div.thumbnail-list2 {
+	width: 100%;
 	max-width: 300px;
 	display: inline-block;
 	padding-right: 15px;
 }
 
-div.thumbnail-list img, div.thumbnail-list2 img {
+div.thumbnail-list img,
+div.thumbnail-list2 img {
 	width: 100%;
 }
 
-#games div.thumbnail-list, #games div.thumbnail-list2 {
+#games div.thumbnail-list,
+#games div.thumbnail-list2 {
 	width: 32%;
-    display: inline-block;
+	display: inline-block;
 }
 
 #games div.thumbnail-list2 {
 	padding-right: 0;
 }
 
-#events div.thumbnail-list, #events div.thumbnail-list2, #articles div.thumbnail-list, #articles div.thumbnail-list2 {
-		width: 40%;
-		display: inline-block;
-		margin: 10px 5px;
-		padding-right: 0;
+#events div.thumbnail-list,
+#events div.thumbnail-list2,
+#articles div.thumbnail-list,
+#articles div.thumbnail-list2 {
+	width: 40%;
+	display: inline-block;
+	margin: 10px 5px;
+	padding-right: 0;
 }
 
 #consulting div.thumbnail-list {
-		width: 40%;
-		float: left;
-		margin-top: 10px;
-		margin-right:10px;
-		padding-right: 0;
+	width: 40%;
+	float: left;
+	margin-top: 10px;
+	margin-right: 10px;
+	padding-right: 0;
 }
 
 
-div.thumbnail-list-small, div.thumbnail-list-small2 {
+div.thumbnail-list-small,
+div.thumbnail-list-small2 {
 	min-width: 140px;
 	margin-left: 5px;
 	margin-right: 5px;
@@ -241,11 +251,13 @@ div.thumbnail-list-small, div.thumbnail-list-small2 {
 	padding-bottom: 10px;
 }
 
-div.thumbnail-list-small img, div.thumbnail-list-small2 img {
+div.thumbnail-list-small img,
+div.thumbnail-list-small2 img {
 	width: 100%;
 }
 
-div.logo-list-small, div.logo-list-small2 {
+div.logo-list-small,
+div.logo-list-small2 {
 	min-width: 0px;
 	margin-left: 0px;
 	margin-right: 30px;
@@ -253,7 +265,8 @@ div.logo-list-small, div.logo-list-small2 {
 	margin-top: 20px;
 }
 
-div.logo-list-small img, div.logo-list-small2 img {
+div.logo-list-small img,
+div.logo-list-small2 img {
 	height: 61px;
 	width: auto;
 }
@@ -265,7 +278,7 @@ div.morelink {
 }
 
 div.spacer {
-	height:16px;
+	height: 16px;
 }
 
 div.line {
@@ -289,31 +302,37 @@ div.line {
 #moregames {
 	padding-top: 20px;
 	min-height: 630px;
-	display:none;
+	display: none;
 	overflow: hidden;
 	width: 100%;
 }
 
-#papers, #talks, #events, #workshops, #articles, #interviews, #consulting {
+#papers,
+#talks,
+#events,
+#workshops,
+#articles,
+#interviews,
+#consulting {
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 20px;
 	overflow: hidden;
 	width: 100%;
 }
 
-#footer{
+#footer {
 	background-color: #2b2b2b;
 	padding: 50px 20px;
 }
 
-#contact{
+#contact {
 	width: 100%;
 	max-width: 940px;
 	overflow: hidden;
 	margin: 0 auto;
 }
 
-#clients{
+#clients {
 	width: 100%;
 	max-width: 940px;
 	padding-top: 40px;
@@ -326,7 +345,7 @@ div.line {
 }
 
 
-#hobbies{
+#hobbies {
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	font-size: 14px;
@@ -335,7 +354,7 @@ div.line {
 	padding-top: 20px;
 }
 
-#consulting{
+#consulting {
 	background-color: #444444;
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
@@ -348,12 +367,13 @@ div.line {
 }
 
 .topcorner {
-  position:absolute;
-  top:0;
-  right:0;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
-.floatL, .floatL_top {
+.floatL,
+.floatL_top {
 	float: left;
 	padding-right: 20px;
 }
@@ -392,14 +412,15 @@ p.number {
 
 .youtube-player {
 	position: relative;
-	padding-bottom: 56.23%; /* Use 75% for 4:3 videos */
+	padding-bottom: 56.23%;
+	/* Use 75% for 4:3 videos */
 	height: 0;
 	overflow: hidden;
 	max-width: 100%;
 	background: #000;
 	margin: 0;
 }
-	
+
 .youtube-player iframe {
 	position: absolute;
 	top: 0;
@@ -409,7 +430,7 @@ p.number {
 	z-index: 100;
 	background: transparent;
 }
-	
+
 .youtube-player img {
 	position: absolute;
 	top: 0;
@@ -421,15 +442,15 @@ p.number {
 	transition: filter .4s;
 	object-fit: cover;
 }
-	
+
 .youtube-player:hover img {
 	filter: brightness(75%);
 }
-	
+
 .youtube-player:hover .play {
 	transform: translate(-50%, -50%) scale(1.2);
 }
-	
+
 .youtube-player .play {
 	position: absolute;
 	top: 50%;
@@ -447,6 +468,7 @@ p.number {
 /* MEDIA QUERIES */
 
 @media (max-width: 1200px) {
+
 	#events div.thumbnail-list,
 	#events div.thumbnail-list2,
 	#articles div.thumbnail-list,
@@ -479,7 +501,8 @@ p.number {
 	}
 }
 
-@media (max-width: 900px), (max-width: 800px) {
+@media (max-width: 900px),
+(max-width: 800px) {
 	#content-wrap {
 		width: 85%;
 	}
@@ -517,6 +540,7 @@ p.number {
 }
 
 @media (max-width: 750px) {
+
 	table,
 	thead,
 	tbody,
@@ -583,6 +607,7 @@ p.number {
 }
 
 @media (max-width: 700px) {
+
 	div.thumbnail-list,
 	#games div.thumbnail-list,
 	div.thumbnail-list2,
@@ -625,18 +650,18 @@ p.number {
 		padding-bottom: 10px;
 	}
 
-		#hello h1 {
-			font-size: 40px;
-			text-align: left;
-		}
-	
-		#hello h2 {
-			font-size: 20px;
-			text-align: left;
-		}
-	
-		#nav {
-			padding-top: 30px;
+	#hello h1 {
+		font-size: 40px;
+		text-align: left;
+	}
+
+	#hello h2 {
+		font-size: 20px;
+		text-align: left;
+	}
+
+	#nav {
+		padding-top: 30px;
 	}
 }
 
