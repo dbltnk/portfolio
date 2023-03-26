@@ -149,11 +149,9 @@ p.caption {
 	color: #2b2b2b;
 }
 
-/*
-*************************************************/
+/**************************************************/
 
 #header {
-	/* height: 420px; */
 	overflow: hidden;
 	padding: 120px 0 20px 0;
 }
@@ -212,7 +210,7 @@ div.thumbnail-list img, div.thumbnail-list2 img {
 
 #games div.thumbnail-list, #games div.thumbnail-list2 {
 	width: 32%;
-	float: left;
+    display: inline-block;
 }
 
 #games div.thumbnail-list2 {
@@ -221,7 +219,7 @@ div.thumbnail-list img, div.thumbnail-list2 img {
 
 #events div.thumbnail-list, #events div.thumbnail-list2, #articles div.thumbnail-list, #articles div.thumbnail-list2 {
 		width: 40%;
-		float: left;
+		display: inline-block;
 		margin: 10px 5px;
 		padding-right: 0;
 }
@@ -390,87 +388,88 @@ p.number {
 }
 
 
+/* YOUTUBE PLAYER */
+
 .youtube-player {
-        position: relative;
-        padding-bottom: 56.23%;
-        /* Use 75% for 4:3 videos */
-        height: 0;
-        overflow: hidden;
-        max-width: 100%;
-        background: #000;
-        margin: 0px;
-    }
-
-    .youtube-player iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 100;
-        background: transparent;
-    }
-
-    .youtube-player img {
-        bottom: 0;
-        display: block;
-        left: 0;
-        margin: auto;
-        max-width: 100%;
-        width: 100%;
-        position: absolute;
-        right: 0;
-        top: 0;
-        border: none;
-        height: auto;
-        cursor: pointer;
-        -webkit-transition: .4s all;
-        -moz-transition: .4s all;
-        transition: .4s all;
-    }
-
-    .youtube-player img:hover {
-        -webkit-filter: brightness(75%);
-		filter: brightness(75%);
-    }
-
-    .youtube-player .play {
-        height: 72px;
-        width: 72px;
-        left: 50%;
-        top: 50%;
-        margin-left: -36px;
-        margin-top: -36px;
-        position: absolute;
-        background: url("assets/play_icon.png") no-repeat;
-        cursor: pointer;
-    }
-
-
+	position: relative;
+	padding-bottom: 56.23%; /* Use 75% for 4:3 videos */
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+	background: #000;
+	margin: 0;
+}
+	
+.youtube-player iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background: transparent;
+}
+	
+.youtube-player img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	cursor: pointer;
+	transition: filter .4s;
+	object-fit: cover;
+}
+	
+.youtube-player:hover img {
+	filter: brightness(75%);
+}
+	
+.youtube-player:hover .play {
+	transform: translate(-50%, -50%) scale(1.2);
+}
+	
+.youtube-player .play {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 72px;
+	height: 72px;
+	background: url("assets/play_icon.png") no-repeat;
+	cursor: pointer;
+	z-index: 2;
+	transition: transform .4s;
+}
 
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 1200px) {
-	#events div.thumbnail-list, #events div.thumbnail-list2, #articles div.thumbnail-list, #articles div.thumbnail-list2 {
+@media (max-width: 1200px) {
+	#events div.thumbnail-list,
+	#events div.thumbnail-list2,
+	#articles div.thumbnail-list,
+	#articles div.thumbnail-list2 {
 		margin: 10px;
 	}
 }
 
-@media screen and (max-width: 970px) {
+@media (max-width: 970px) {
 	div.blurb-text2 {
 		margin-top: 20px;
 	}
 }
 
-@media screen and (max-width: 850px) {
+@media (max-width: 850px) {
 	#blurb {
 		padding: 20px 10px;
 		display: block;
 		justify-content: flex-start;
 	}
 
-	div.blurb-text, div.blurb-text2 {
+	div.blurb-text,
+	div.blurb-text2 {
 		float: none;
 		display: block;
 		margin: 30px auto;
@@ -480,12 +479,13 @@ p.number {
 	}
 }
 
-@media screen and (max-width: 900px) {
+@media (max-width: 900px), (max-width: 800px) {
 	#content-wrap {
 		width: 85%;
 	}
 
-	#header, #nav {
+	#header,
+	#nav {
 		padding-top: 60px;
 	}
 
@@ -507,7 +507,8 @@ p.number {
 		padding-top: 30px;
 	}
 
-	.floatL, .floatR {
+	.floatL,
+	.floatR {
 		width: 100%;
 		float: none;
 		text-align: center;
@@ -515,12 +516,13 @@ p.number {
 	}
 }
 
-@media screen and (max-width: 800px) {
-
-}
-
-@media screen and (max-width: 750px) {
-	table, thead, tbody, tr, td, th {
+@media (max-width: 750px) {
+	table,
+	thead,
+	tbody,
+	tr,
+	td,
+	th {
 		display: block;
 	}
 
@@ -541,7 +543,8 @@ p.number {
 		border-collapse: collapse;
 	}
 
-	tr, td {
+	tr,
+	td {
 		padding: 0;
 		margin: 0;
 	}
@@ -559,7 +562,8 @@ p.number {
 		margin: 5px 0;
 	}
 
-	td.spaced, td.first {
+	td.spaced,
+	td.first {
 		padding-left: 0;
 		margin-left: -3px !important;
 	}
@@ -578,17 +582,12 @@ p.number {
 	}
 }
 
-@media screen and (max-width: 700px) {
-	div.thumbnail-list, #games div.thumbnail-list {
-		display: block;
-		padding-right: 0;
-		max-width: 500px;
-		margin: 15px auto 25px auto;
-		float: none;
-		width: 60%;
-	}
-
-	div.thumbnail-list2, #games div.thumbnail-list2 {
+@media (max-width: 700px) {
+	div.thumbnail-list,
+	#games div.thumbnail-list,
+	div.thumbnail-list2,
+	#games div.thumbnail-list2,
+	#consulting div.thumbnail-list {
 		display: block;
 		max-width: 500px;
 		margin: 15px auto 25px auto;
@@ -597,12 +596,9 @@ p.number {
 	}
 
 	#consulting div.thumbnail-list {
-		display: block;
 		padding-right: 0;
-		max-width: 500px;
-		margin: 0px auto 25px auto;
-		float: none;
 		width: 100%;
+		margin: 0 auto 25px auto;
 	}
 
 	#hello h1 {
@@ -614,53 +610,56 @@ p.number {
 	}
 }
 
-@media screen and (max-width: 420px) {
+@media (max-width: 420px) {
 	#header {
-		padding: 40px 0 20px 0;
+		padding: 40px 0 20px;
 	}
 
 	#hello {
 		text-align: center;
 	}
 
-	.floatL, .floatL_top {
+	.floatL,
+	.floatL_top {
 		float: none;
 		padding-bottom: 10px;
 	}
 
-	#hello h1 {
-		font-size: 40px;
-		text-align: left;
-	}
-
-	#hello h2 {
-		font-size: 20px;
-		text-align: left;
-	}
-
-	#nav {
-		padding-top: 30px;
+		#hello h1 {
+			font-size: 40px;
+			text-align: left;
+		}
+	
+		#hello h2 {
+			font-size: 20px;
+			text-align: left;
+		}
+	
+		#nav {
+			padding-top: 30px;
 	}
 }
 
-@media screen and (max-width: 400px) {
+@media (max-width: 400px) {
 	#moregames {
 		padding-top: 40px;
 		overflow: hidden;
 		width: 100%;
 	}
 
-	#games div.thumbnail-list, #games div.thumbnail-list2 {
-		width: 100%;
-	}
-
-	#events div.thumbnail-list, #events div.thumbnail-list2, #articles div.thumbnail-list, #articles div.thumbnail-list2 {
+	#games div.thumbnail-list,
+	#games div.thumbnail-list2,
+	#events div.thumbnail-list,
+	#events div.thumbnail-list2,
+	#articles div.thumbnail-list,
+	#articles div.thumbnail-list2 {
 		width: 100%;
 		float: none;
 		margin: 10px 0;
 	}
 
-	div.thumbnail-list-small, div.thumbnail-list-small2 {
+	div.thumbnail-list-small,
+	div.thumbnail-list-small2 {
 		min-width: 100px;
 		width: 45%;
 		float: left;
@@ -669,11 +668,13 @@ p.number {
 		padding-bottom: 0;
 	}
 
-	div.thumbnail-list-small h5, div.thumbnail-list-small2 h5 {
+	div.thumbnail-list-small h5,
+	div.thumbnail-list-small2 h5 {
 		font-size: 12px;
 	}
 
-	div.thumbnail-list-small p, div.thumbnail-list-small2 p {
+	div.thumbnail-list-small p,
+	div.thumbnail-list-small2 p {
 		font-size: 10px;
 	}
 
@@ -687,13 +688,13 @@ p.number {
 	}
 }
 
-@media screen and (max-width: 375px) {
+@media (max-width: 375px) {
 	#hello h2 {
 		font-size: 18px;
 	}
 }
 
-@media screen and (max-width: 320px) {
+@media (max-width: 320px) {
 	#hello h1 {
 		font-size: 38px;
 	}
