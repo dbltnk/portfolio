@@ -29,7 +29,7 @@ body {
 
 #content-wrap {
 	margin: 0 auto;
-	width: 78%; /* width: 940px; */
+	width: 78%;
 	max-width: 940px;
 }
 
@@ -54,12 +54,6 @@ h1 {
 	font-size: 48px;
 	line-height: 1.4;
 }
-
-/*
-#hello {
-	padding-top: 120px;
-}
-*/
 
 h2 {
 	font-family: 'Lato', sans-serif;
@@ -160,8 +154,8 @@ p.caption {
 
 #header {
 	/* height: 420px; */
-	overflow: hidden; /* new */
-	padding: 120px 0 20px 0; /* new */
+	overflow: hidden;
+	padding: 120px 0 20px 0;
 }
 
 #nav {
@@ -182,25 +176,24 @@ a.scroll:hover {
 
 #black {
 	background-color: #2b2b2b;
-	min-width: 320px; /* new */
-	width: 100%; /* new */
-	/* height: 240px; */
+	min-width: 320px;
+	width: 100%;
 }
 
 #blurb {
-	max-width: 940px; /* width: 940px; */
+	max-width: 940px;
 	margin: 0 auto;
-	padding: 40px 20px; /* new */
-	overflow: hidden; /* new */
+	padding: 40px 20px;
+	overflow: hidden;
 
 }
 
 div.blurb-text, div.blurb-text2 {
-	width: 33%; /* width: 300px; */
+	width: 33%;
 	max-width: 300px;
 	display: inline-block;
 	color: #fff;
-	float: left; /* new */
+	float: left;
 }
 
 div.blurb-text {
@@ -208,14 +201,14 @@ div.blurb-text {
 }
 
 div.thumbnail-list, div.thumbnail-list2 {
-	width: 100%; /* width: 300px; */
+	width: 100%; 
 	max-width: 300px;
 	display: inline-block;
 	padding-right: 15px;
 }
 
 div.thumbnail-list img, div.thumbnail-list2 img {
-	width: 100%; /* new */
+	width: 100%;
 }
 
 #games div.thumbnail-list, #games div.thumbnail-list2 {
@@ -276,10 +269,6 @@ div.morelink {
 	right: 0;
 }
 
-div.text-list {
-
-}
-
 div.spacer {
 	height:16px;
 }
@@ -298,43 +287,17 @@ div.line {
 }
 
 #games {
-	/* height: 310px; */
 	overflow: hidden;
 	position: relative;
 }
 
 #moregames {
 	padding-top: 20px;
-	min-height: 630px; /* height: 630px */
+	min-height: 630px;
 	display:none;
 	overflow: hidden;
 	width: 100%;
 }
-
-/*
-
-#talks {
-	height: 660px;
-	border-bottom: 1px solid #ccc;
-}
-#events {
-	height: 650px;
-	border-bottom: 1px solid #ccc;
-}
-#workshops {
-	height: 350px;
-	border-bottom: 1px solid #ccc;
-}
-#articles {
-	height: 650px;
-	border-bottom: 1px solid #ccc;
-}
-#interviews {
-	height: 650px;
-	border-bottom: 1px solid #ccc;
-}
-
- */
 
 #papers, #talks, #events, #workshops, #articles, #interviews, #consulting {
 	border-bottom: 1px solid #ccc;
@@ -351,8 +314,7 @@ div.line {
 #contact{
 	width: 100%;
 	max-width: 940px;
-	/* padding-top: 40px; */
-	overflow: hidden; /* new */
+	overflow: hidden;
 	margin: 0 auto;
 }
 
@@ -360,7 +322,7 @@ div.line {
 	width: 100%;
 	max-width: 940px;
 	padding-top: 40px;
-	overflow: hidden; /* new */
+	overflow: hidden;
 	margin: 0 auto;
 }
 
