@@ -215,7 +215,7 @@ div.thumbnail-list2 img {
 
 #games div.thumbnail-list,
 #games div.thumbnail-list2 {
-	width: 32%;
+	width: 31%;
 	display: inline-block;
 }
 
@@ -227,7 +227,7 @@ div.thumbnail-list2 img {
 #events div.thumbnail-list2,
 #articles div.thumbnail-list,
 #articles div.thumbnail-list2 {
-	width: 40%;
+	width: 30%;
 	display: inline-block;
 	margin: 10px 5px;
 	padding-right: 0;
