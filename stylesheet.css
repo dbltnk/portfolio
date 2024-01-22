@@ -1,12 +1,62 @@
 /*reset*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -537,6 +587,15 @@ p.number {
 		text-align: center;
 		padding-right: 0;
 	}
+
+	#hello h1 {
+		font-size: 36px;
+	}
+
+	#hello h2 {
+		font-size: 24px;
+	}
+
 }
 
 @media (max-width: 750px) {
@@ -627,11 +686,15 @@ p.number {
 	}
 
 	#hello h1 {
-		font-size: 42px;
+		font-size: 32px;
 	}
 
 	#hello h2 {
-		font-size: 28px;
+		font-size: 20px;
+	}
+
+	.topcorner {
+		display: none;
 	}
 }
 
@@ -648,16 +711,6 @@ p.number {
 	.floatL_top {
 		float: none;
 		padding-bottom: 10px;
-	}
-
-	#hello h1 {
-		font-size: 40px;
-		text-align: left;
-	}
-
-	#hello h2 {
-		font-size: 20px;
-		text-align: left;
 	}
 
 	#nav {
@@ -714,6 +767,10 @@ p.number {
 }
 
 @media (max-width: 375px) {
+	#hello h1 {
+		font-size: 30px;
+	}
+
 	#hello h2 {
 		font-size: 18px;
 	}
@@ -721,7 +778,7 @@ p.number {
 
 @media (max-width: 320px) {
 	#hello h1 {
-		font-size: 38px;
+		font-size: 26px;
 	}
 
 	#hello h2 {
