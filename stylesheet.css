@@ -306,19 +306,29 @@ div.thumbnail-list-small2 img {
 	width: 100%;
 }
 
-div.logo-list-small,
-div.logo-list-small2 {
-	min-width: 0px;
+div.logo-list-small {
+	display: flex;
+	justify-content: left;
+	flex-wrap: wrap;
 	margin-left: 0px;
 	margin-right: 30px;
-	float: left;
 	margin-top: 20px;
 }
 
-div.logo-list-small img,
-div.logo-list-small2 img {
-	height: 61px;
+div.logo-list-small img {
+	height: 40px;
 	width: auto;
+	margin: 16px;
+	margin-bottom: 12px;
+	filter: grayscale(100%);
+}
+
+div.logo-list-small img.contrast {
+	filter: grayscale(100%) brightness(300%);
+}
+
+div.logo-list-small img.invert {
+	filter: grayscale(100%) invert(1);
 }
 
 div.morelink {
