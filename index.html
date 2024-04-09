@@ -17,8 +17,6 @@
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 	<script>
 		/* Light YouTube Embeds by @labnol */
 		/* Web: http://labnol.org/?p=27941 */
@@ -202,16 +200,16 @@
 		</div>
 
 		<script>
-			$("#toggleLink").click(function () {
-				$("#moregames").slideToggle("slow");
-				if ($(this).html() === 'show full list') {
-					$(this).html('close list');
-				} else {
-					$(this).html('show full list');
-				};
-				return false;
-			});
+			document.addEventListener("DOMContentLoaded", function () {
+				var toggleLink = document.getElementById("toggleLink");
+				var moregames = document.getElementById("moregames");
 
+				toggleLink.addEventListener("click", function (e) {
+					e.preventDefault();
+					moregames.style.display = (moregames.style.display !== "block") ? "block" : "none";
+					toggleLink.textContent = (toggleLink.textContent === 'show full list') ? 'close list' : 'show full list';
+				});
+			});
 		</script>
 
 		<div id="moregames">
