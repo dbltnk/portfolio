@@ -77,10 +77,13 @@ body {
 	width: 100%;
 }
 
-#content-wrap {
-	margin: 0 auto;
-	width: 78%;
-	max-width: 940px;
+#content-wrap,
+#blurb,
+#contact,
+#clients {
+	width: min(100% - 2.5rem, 940px);
+	margin-inline: auto;
+	box-sizing: border-box;
 }
 
 a {
@@ -101,7 +104,7 @@ a:hover {
 a.signup_link {
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
-	font-size: 28px;
+	font-size: 22px;
 	line-height: 1.3;
 }
 
@@ -238,7 +241,8 @@ p.caption {
 }
 
 #hello .hello-text {
-	flex: 0 0 auto;
+	flex: 1 1 auto;
+	min-width: 0;
 }
 
 #hello h1 {
@@ -249,7 +253,7 @@ p.caption {
 }
 
 #hello h2 {
-	font-size: 28px;
+	font-size: 22px;
 	line-height: 1.35;
 	margin: 0;
 	font-weight: 300;
@@ -286,79 +290,72 @@ a.nav-item:hover {
 }
 
 #blurb {
-	max-width: 940px;
-	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem 1.75rem;
 	padding: 40px 20px;
 	overflow: hidden;
-
 }
 
 div.blurb-text,
 div.blurb-text2 {
-	width: 33%;
-	max-width: 300px;
+	width: auto;
+	max-width: none;
+	float: none;
+	padding-right: 0;
 	color: #fff;
-	float: left;
 }
 
-div.blurb-text {
-	padding-right: 15px;
+#games,
+#events,
+#articles {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+	gap: 1.5rem 1.75rem;
+}
+
+#games > h4,
+#events > h4,
+#articles > h4 {
+	grid-column: 1 / -1;
+}
+
+#games .morelink {
+	grid-column: 1 / -1;
+	position: static;
+	justify-self: end;
+}
+
+#moregames {
+	display: none;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr));
+	gap: 1rem 1.25rem;
+	padding-top: 20px;
+	min-height: 0;
+	overflow: hidden;
+	width: 100%;
 }
 
 div.thumbnail-list,
-div.thumbnail-list2 {
-	width: 100%;
-	max-width: 300px;
-	display: inline-block;
-	padding-right: 15px;
+div.thumbnail-list2,
+div.thumbnail-list-small,
+div.thumbnail-list-small2 {
+	width: auto;
+	max-width: none;
+	float: none;
+	display: block;
+	margin: 0;
+	padding-right: 0;
+	min-width: 0;
 }
 
 div.thumbnail-list img,
-div.thumbnail-list2 img {
-	width: 100%;
-}
-
-#games div.thumbnail-list,
-#games div.thumbnail-list2 {
-	width: 31%;
-	display: inline-block;
-}
-
-#games div.thumbnail-list2 {
-	padding-right: 0;
-}
-
-#events div.thumbnail-list,
-#events div.thumbnail-list2,
-#articles div.thumbnail-list,
-#articles div.thumbnail-list2 {
-	width: 30%;
-	display: inline-block;
-	margin: 10px 5px;
-	padding-right: 0;
-}
-
-#consulting div.thumbnail-list {
-	width: 40%;
-	float: left;
-	margin-top: 10px;
-	margin-right: 10px;
-	padding-right: 0;
-}
-
-
-div.thumbnail-list-small,
-div.thumbnail-list-small2 {
-	min-width: 140px;
-	margin-left: 5px;
-	margin-right: 5px;
-	float: left;
-	padding-bottom: 10px;
-}
-
+div.thumbnail-list2 img,
 div.thumbnail-list-small img,
 div.thumbnail-list-small2 img {
 	width: 100%;
+	height: auto;
+	display: block;
 }
 
 div.logo-list-small {
@@ -393,7 +390,7 @@ div.morelink {
 }
 
 div.spacer {
-	height: 16px;
+	display: none;
 }
 
 div.line {
@@ -412,14 +409,6 @@ div.line {
 #games {
 	overflow: hidden;
 	position: relative;
-}
-
-#moregames {
-	padding-top: 20px;
-	min-height: 630px;
-	display: none;
-	overflow: hidden;
-	width: 100%;
 }
 
 #papers,
@@ -441,22 +430,12 @@ div.line {
 }
 
 #contact {
-	width: 100%;
-	max-width: 940px;
 	overflow: hidden;
-	margin: 0 auto;
 }
 
 #clients {
-	width: 100%;
-	max-width: 940px;
 	padding-top: 40px;
 	overflow: hidden;
-	margin: 0 auto;
-}
-
-#clients {
-	width: 90%;
 }
 
 
@@ -537,13 +516,17 @@ p.number {
 
 .youtube-player {
 	position: relative;
-	padding-bottom: 56.23%;
-	/* Use 75% for 4:3 videos */
+	padding-bottom: 56.25%;
 	height: 0;
 	overflow: hidden;
 	max-width: 100%;
 	background: #000;
 	margin: 0;
+}
+
+.youtube-player > div {
+	position: absolute;
+	inset: 0;
 }
 
 .youtube-player iframe {
@@ -566,6 +549,10 @@ p.number {
 	cursor: pointer;
 	transition: filter .4s;
 	object-fit: cover;
+	object-position: center center;
+	/* Crop letterboxing baked into many YouTube thumbs */
+	transform: scale(1.35);
+	transform-origin: center center;
 }
 
 .youtube-player:hover img {
@@ -592,52 +579,9 @@ p.number {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 1200px) {
-
-	#events div.thumbnail-list,
-	#events div.thumbnail-list2,
-	#articles div.thumbnail-list,
-	#articles div.thumbnail-list2 {
-		margin: 10px;
-	}
-}
-
-@media (max-width: 970px) {
-	div.blurb-text2 {
-		margin-top: 20px;
-	}
-}
-
-@media (max-width: 850px) {
-	#blurb {
-		padding: 20px 10px;
-		display: block;
-		justify-content: flex-start;
-	}
-
-	div.blurb-text,
-	div.blurb-text2 {
-		float: none;
-		display: block;
-		margin: 30px auto;
-		max-width: 600px;
-		width: 90%;
-		padding: 0;
-	}
-}
-
-@media (max-width: 900px),
-(max-width: 800px) {
-	#content-wrap {
-		width: 85%;
-	}
-
-	#header,
-	#nav {
-		padding-top: 60px;
-	}
-
+@media (max-width: 768px) {
 	#header {
+		padding-top: 60px;
 		flex-direction: column;
 		align-items: stretch;
 		gap: 20px;
@@ -655,8 +599,18 @@ p.number {
 		margin: 6px 0;
 	}
 
-	#contact {
-		width: 90%;
+	#blurb {
+		padding: 20px 10px;
+		grid-template-columns: 1fr;
+		gap: 1.75rem;
+	}
+
+	div.blurb-text,
+	div.blurb-text2 {
+		margin: 0;
+		max-width: none;
+		width: auto;
+		padding: 0;
 	}
 
 	.floatR {
@@ -671,9 +625,12 @@ p.number {
 		padding-right: 0;
 	}
 
-	/* Keep hello type full-size on tablet; only the layout stacks later */
 	#hello {
 		justify-content: flex-start;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 16px;
 	}
 
 	#hello .floatL_top {
@@ -681,9 +638,18 @@ p.number {
 		height: 160px;
 	}
 
-}
+	#hello h1,
+	#hello .hello-line {
+		white-space: normal;
+	}
 
-@media (max-width: 750px) {
+	#hello h2 {
+		font-size: 18px;
+	}
+
+	a.signup_link {
+		font-size: 18px;
+	}
 
 	table,
 	thead,
@@ -748,69 +714,28 @@ p.number {
 	td strong {
 		line-height: 1;
 	}
-}
-
-@media (max-width: 700px) {
-
-	div.thumbnail-list,
-	#games div.thumbnail-list,
-	div.thumbnail-list2,
-	#games div.thumbnail-list2,
-	#consulting div.thumbnail-list {
-		display: block;
-		max-width: 500px;
-		margin: 15px auto 25px auto;
-		float: none;
-		width: 60%;
-	}
-
-	#consulting div.thumbnail-list {
-		padding-right: 0;
-		width: 100%;
-		margin: 0 auto 25px auto;
-	}
-
-	#hello {
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		gap: 16px;
-	}
-
-	#hello .floatL_top {
-		width: 140px;
-		height: 140px;
-	}
-
-	#hello h1 {
-		font-size: 36px;
-	}
-
-	#hello h2 {
-		font-size: 22px;
-	}
-
-	a.signup_link {
-		font-size: 20px;
-	}
 
 	.topcorner {
 		width: 110px;
 	}
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
 	#header {
 		padding: 40px 0 20px;
-	}
-
-	#hello {
-		text-align: center;
 	}
 
 	#hello .floatL_top {
 		width: 120px;
 		height: 120px;
+	}
+
+	#hello h2 {
+		font-size: 16px;
+	}
+
+	a.signup_link {
+		font-size: 16px;
 	}
 
 	.floatL,
@@ -826,44 +751,9 @@ p.number {
 	.topcorner {
 		width: 90px;
 	}
-}
 
-@media (max-width: 400px) {
 	#moregames {
 		padding-top: 40px;
-		overflow: hidden;
-		width: 100%;
-	}
-
-	#games div.thumbnail-list,
-	#games div.thumbnail-list2,
-	#events div.thumbnail-list,
-	#events div.thumbnail-list2,
-	#articles div.thumbnail-list,
-	#articles div.thumbnail-list2 {
-		width: 100%;
-		float: none;
-		margin: 10px 0;
-	}
-
-	div.thumbnail-list-small,
-	div.thumbnail-list-small2 {
-		min-width: 100px;
-		width: 45%;
-		float: left;
-		margin: 0 4px;
-		padding-right: 0;
-		padding-bottom: 0;
-	}
-
-	div.thumbnail-list-small h5,
-	div.thumbnail-list-small2 h5 {
-		font-size: 12px;
-	}
-
-	div.thumbnail-list-small p,
-	div.thumbnail-list-small2 p {
-		font-size: 10px;
 	}
 
 	.floatL h3 {
@@ -873,33 +763,5 @@ p.number {
 
 	.floatR img {
 		max-width: 40px;
-	}
-}
-
-@media (max-width: 375px) {
-	#hello h1 {
-		font-size: 32px;
-	}
-
-	#hello h2 {
-		font-size: 20px;
-	}
-
-	a.signup_link {
-		font-size: 18px;
-	}
-}
-
-@media (max-width: 320px) {
-	#hello h1 {
-		font-size: 28px;
-	}
-
-	#hello h2 {
-		font-size: 18px;
-	}
-
-	a.signup_link {
-		font-size: 16px;
 	}
 }

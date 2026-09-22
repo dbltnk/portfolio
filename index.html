@@ -43,17 +43,38 @@
 				wrapper.setAttribute("aria-label", "Play video");
 				wrapper.setAttribute("tabindex", "0");
 
-				// Create thumbnail with loading optimization
-				wrapper.innerHTML = `
-				<img 
-					src="https://i.ytimg.com/vi/${videoId}/hqdefault.jpg"
-					alt="Video thumbnail" 
-					loading="lazy"
-					width="480"
-					height="360"
-				>
-				<div class="play" aria-hidden="true"></div>
-			`;
+				// Prefer true 16:9 thumbs; reject YouTube's 120x90 "missing" placeholder
+				const img = document.createElement("img");
+				img.alt = "Video thumbnail";
+				img.loading = "lazy";
+				img.width = 1280;
+				img.height = 720;
+				const candidates = [
+					`https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`,
+					`https://i.ytimg.com/vi/${videoId}/hq720.jpg`,
+					`https://i.ytimg.com/vi/${videoId}/mqdefault.jpg`,
+					`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,
+				];
+				let candidateIndex = 0;
+				const tryNextThumb = () => {
+					if (candidateIndex >= candidates.length) return;
+					img.src = candidates[candidateIndex++];
+				};
+				img.addEventListener("load", () => {
+					// YouTube serves a 120×90 gray placeholder when a size is missing
+					if (img.naturalWidth <= 120 && candidateIndex < candidates.length) {
+						tryNextThumb();
+					}
+				});
+				img.addEventListener("error", tryNextThumb);
+				tryNextThumb();
+
+				const play = document.createElement("div");
+				play.className = "play";
+				play.setAttribute("aria-hidden", "true");
+
+				wrapper.appendChild(img);
+				wrapper.appendChild(play);
 
 				// Support both click and keyboard interaction
 				const playVideo = () => {
@@ -206,8 +227,9 @@
 
 				toggleLink.addEventListener("click", function (e) {
 					e.preventDefault();
-					moregames.style.display = (moregames.style.display !== "block") ? "block" : "none";
-					toggleLink.textContent = (toggleLink.textContent === 'show full list') ? 'close list' : 'show full list';
+					var isOpen = moregames.style.display === "grid";
+					moregames.style.display = isOpen ? "none" : "grid";
+					toggleLink.textContent = isOpen ? 'show full list' : 'close list';
 				});
 			});
 		</script>
