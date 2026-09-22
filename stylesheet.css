@@ -213,11 +213,59 @@ p.caption {
 #header {
 	overflow: hidden;
 	padding: 120px 0 20px 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 24px 40px;
+}
+
+#hello {
+	display: flex;
+	align-items: flex-start;
+	gap: 24px;
+	flex: 0 1 auto;
+}
+
+#hello .floatL_top {
+	float: none;
+	width: 180px;
+	height: 180px;
+	padding-right: 0;
+	flex-shrink: 0;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+#hello .hello-text {
+	flex: 0 0 auto;
+}
+
+#hello h1 {
+	font-size: 48px;
+	line-height: 1.2;
+	margin: 0 0 6px;
+	white-space: nowrap;
+}
+
+#hello h2 {
+	font-size: 28px;
+	line-height: 1.35;
+	margin: 0;
+	font-weight: 300;
+}
+
+#hello .hello-line {
+	display: block;
+	white-space: nowrap;
 }
 
 #nav {
-	float: right;
-	padding-top: 120px;
+	float: none;
+	padding-top: 8px;
+	flex: 0 1 auto;
+	text-align: right;
+	margin-left: auto;
 }
 
 a.nav-item {
@@ -437,6 +485,9 @@ div.line {
 	position: absolute;
 	top: 0;
 	right: 0;
+	width: 160px;
+	height: auto;
+	z-index: 2;
 }
 
 .floatL,
@@ -448,6 +499,13 @@ div.line {
 .v_align {
 	display: inline-block;
 	vertical-align: middle;
+}
+
+img.v_align {
+	border-radius: 50%;
+	width: 141px;
+	height: 141px;
+	object-fit: cover;
 }
 
 h3.v_align {
@@ -579,9 +637,17 @@ p.number {
 		padding-top: 60px;
 	}
 
+	#header {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 20px;
+	}
+
 	#nav {
 		float: none;
 		text-align: center;
+		margin-left: 0;
+		padding-top: 0;
 	}
 
 	a.nav-item {
@@ -605,12 +671,14 @@ p.number {
 		padding-right: 0;
 	}
 
-	#hello h1 {
-		font-size: 36px;
+	/* Keep hello type full-size on tablet; only the layout stacks later */
+	#hello {
+		justify-content: flex-start;
 	}
 
-	#hello h2 {
-		font-size: 24px;
+	#hello .floatL_top {
+		width: 160px;
+		height: 160px;
 	}
 
 }
@@ -702,12 +770,24 @@ p.number {
 		margin: 0 auto 25px auto;
 	}
 
+	#hello {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 16px;
+	}
+
+	#hello .floatL_top {
+		width: 140px;
+		height: 140px;
+	}
+
 	#hello h1 {
-		font-size: 32px;
+		font-size: 36px;
 	}
 
 	#hello h2 {
-		font-size: 20px;
+		font-size: 22px;
 	}
 
 	a.signup_link {
@@ -715,7 +795,7 @@ p.number {
 	}
 
 	.topcorner {
-		display: none;
+		width: 110px;
 	}
 }
 
@@ -728,6 +808,11 @@ p.number {
 		text-align: center;
 	}
 
+	#hello .floatL_top {
+		width: 120px;
+		height: 120px;
+	}
+
 	.floatL,
 	.floatL_top {
 		float: none;
@@ -736,6 +821,10 @@ p.number {
 
 	#nav {
 		padding-top: 30px;
+	}
+
+	.topcorner {
+		width: 90px;
 	}
 }
 
@@ -789,11 +878,11 @@ p.number {
 
 @media (max-width: 375px) {
 	#hello h1 {
-		font-size: 30px;
+		font-size: 32px;
 	}
 
 	#hello h2 {
-		font-size: 18px;
+		font-size: 20px;
 	}
 
 	a.signup_link {
@@ -803,11 +892,11 @@ p.number {
 
 @media (max-width: 320px) {
 	#hello h1 {
-		font-size: 26px;
+		font-size: 28px;
 	}
 
 	#hello h2 {
-		font-size: 16px;
+		font-size: 18px;
 	}
 
 	a.signup_link {
